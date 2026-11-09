@@ -1,0 +1,7 @@
+PATH="/usr/local/hadoop/bin:/usr/local/hadoop/sbin:/home/joel/kafka/bin:/home/joel/flink/bin:/home/joel/mongodb/bin:/home/joel/spark-env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+HADOOP_HOME="/usr/local/hadoop"
+KAFKA_HOME="/home/joel/kafka"
+FLINK_HOME="/home/joel/flink"
+MONGO_HOME="/home/joel/mongodb"
+SPARK_HOME="/home/joel/spark-env/lib/python3.12/site-packages/pyspark"

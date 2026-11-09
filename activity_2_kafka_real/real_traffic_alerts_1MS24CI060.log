@@ -1,0 +1,638 @@
+
+--- REAL KAFKA STREAM SESSION: USN 1MS24CI060 | START: 2026-11-04 14:37:37.596128 ---
+[ALERT - CRITICAL CONGESTION] #01
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 64 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 0 | Time: 2026-11-04 14:36:59
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #02
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 83 Vehicles | Avg Speed: 19.1 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 0, Offset 2 | Time: 2026-11-04 14:37:07
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #03
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 67 Vehicles (Threshold > 60) | Avg Speed: 13.0 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 3 | Time: 2026-11-04 14:37:09
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #04
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 108 Vehicles (Threshold > 60) | Avg Speed: 8.8 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 6 | Time: 2026-11-04 14:37:12
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #05
+  Junction  : Mathikere Post Office Cross (SENSOR_1MS24CI060_MATHIKERE)
+  Metrics   : 112 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 2, Offset 2 | Time: 2026-11-04 14:37:02
+  Action    : Dispatching traffic warden to Mathikere Post Office Cross; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #06
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 71 Vehicles (Threshold > 60) | Avg Speed: 8.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 0 | Time: 2026-11-04 14:36:57
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #07
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 76 Vehicles (Threshold > 60) | Avg Speed: 6.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 5 | Time: 2026-11-04 14:37:02
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #08
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 97 Vehicles | Avg Speed: 15.5 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 8 | Time: 2026-11-04 14:37:05
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - WARNING CONGESTION] #09
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 86 Vehicles | Avg Speed: 15.0 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 9 | Time: 2026-11-04 14:37:05
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #10
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 77 Vehicles (Threshold > 60) | Avg Speed: 9.2 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 15 | Time: 2026-11-04 14:37:13
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #11
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 87 Vehicles (Threshold > 60) | Avg Speed: 12.1 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 16 | Time: 2026-11-04 14:37:15
+  Action    : Dispatching traffic warden to MSRIT Main Gate (Mathikere); Triggering signal cycle extension.
+
+
+--- REAL KAFKA STREAM SESSION: USN 1MS24CI060 | START: 2026-11-04 15:02:21.701059 ---
+[ALERT - CRITICAL CONGESTION] #01
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 71 Vehicles (Threshold > 60) | Avg Speed: 8.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 17 | Time: 2026-11-04 15:02:03
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #02
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 76 Vehicles (Threshold > 60) | Avg Speed: 6.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 22 | Time: 2026-11-04 15:02:08
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #03
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 97 Vehicles | Avg Speed: 15.5 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 25 | Time: 2026-11-04 15:02:10
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - WARNING CONGESTION] #04
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 86 Vehicles | Avg Speed: 15.0 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 26 | Time: 2026-11-04 15:02:11
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #05
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 77 Vehicles (Threshold > 60) | Avg Speed: 9.2 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 32 | Time: 2026-11-04 15:02:18
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #06
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 87 Vehicles (Threshold > 60) | Avg Speed: 12.1 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 33 | Time: 2026-11-04 15:02:20
+  Action    : Dispatching traffic warden to MSRIT Main Gate (Mathikere); Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #07
+  Junction  : Mathikere Post Office Cross (SENSOR_1MS24CI060_MATHIKERE)
+  Metrics   : 112 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 2, Offset 6 | Time: 2026-11-04 15:02:07
+  Action    : Dispatching traffic warden to Mathikere Post Office Cross; Triggering signal cycle extension.
+
+
+--- REAL KAFKA STREAM SESSION: USN 1MS24CI060 | START: 2026-11-07 14:57:55.942864 ---
+
+--- REAL KAFKA STREAM SESSION: USN 1MS24CI060 | START: 2026-11-07 14:59:32.289887 ---
+[ALERT - CRITICAL CONGESTION] #01
+  Junction  : Mathikere Post Office Cross (SENSOR_1MS24CI060_MATHIKERE)
+  Metrics   : 112 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 2, Offset 2 | Time: 2026-11-07 14:45:57
+  Action    : Dispatching traffic warden to Mathikere Post Office Cross; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #02
+  Junction  : Mathikere Post Office Cross (SENSOR_1MS24CI060_MATHIKERE)
+  Metrics   : 112 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 2, Offset 6 | Time: 2026-11-07 14:57:14
+  Action    : Dispatching traffic warden to Mathikere Post Office Cross; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #03
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 71 Vehicles (Threshold > 60) | Avg Speed: 8.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 0 | Time: 2026-11-07 14:45:53
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #04
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 76 Vehicles (Threshold > 60) | Avg Speed: 6.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 5 | Time: 2026-11-07 14:45:58
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #05
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 97 Vehicles | Avg Speed: 15.5 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 8 | Time: 2026-11-07 14:46:01
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - WARNING CONGESTION] #06
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 86 Vehicles | Avg Speed: 15.0 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 9 | Time: 2026-11-07 14:46:01
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #07
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 71 Vehicles (Threshold > 60) | Avg Speed: 8.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 14 | Time: 2026-11-07 14:57:10
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #08
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 76 Vehicles (Threshold > 60) | Avg Speed: 6.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 19 | Time: 2026-11-07 14:57:15
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #09
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 97 Vehicles | Avg Speed: 15.5 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 22 | Time: 2026-11-07 14:57:18
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - WARNING CONGESTION] #10
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 86 Vehicles | Avg Speed: 15.0 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 23 | Time: 2026-11-07 14:57:18
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #11
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 77 Vehicles (Threshold > 60) | Avg Speed: 9.2 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 29 | Time: 2026-11-07 14:57:26
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #12
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 87 Vehicles (Threshold > 60) | Avg Speed: 12.1 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 30 | Time: 2026-11-07 14:57:27
+  Action    : Dispatching traffic warden to MSRIT Main Gate (Mathikere); Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #13
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 64 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 0 | Time: 2026-11-07 14:45:54
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #14
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 83 Vehicles | Avg Speed: 19.1 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 0, Offset 2 | Time: 2026-11-07 14:46:02
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #15
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 67 Vehicles (Threshold > 60) | Avg Speed: 13.0 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 3 | Time: 2026-11-07 14:46:04
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #16
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 64 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 5 | Time: 2026-11-07 14:57:11
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #17
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 83 Vehicles | Avg Speed: 19.1 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 0, Offset 7 | Time: 2026-11-07 14:57:19
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #18
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 67 Vehicles (Threshold > 60) | Avg Speed: 13.0 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 8 | Time: 2026-11-07 14:57:21
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #19
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 108 Vehicles (Threshold > 60) | Avg Speed: 8.8 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 11 | Time: 2026-11-07 14:57:25
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+
+--- REAL KAFKA STREAM SESSION: USN 1MS24CI060 | START: 2026-11-07 15:01:16.271749 ---
+
+--- REAL KAFKA STREAM SESSION: USN 1MS24CI060 | START: 2026-11-07 15:03:32.413996 ---
+[ALERT - CRITICAL CONGESTION] #01
+  Junction  : Mathikere Post Office Cross (SENSOR_1MS24CI060_MATHIKERE)
+  Metrics   : 112 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 2, Offset 10 | Time: 2026-11-07 15:01:37
+  Action    : Dispatching traffic warden to Mathikere Post Office Cross; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #02
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 64 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 14 | Time: 2026-11-07 15:01:34
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #03
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 83 Vehicles | Avg Speed: 19.1 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 0, Offset 16 | Time: 2026-11-07 15:01:42
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #04
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 67 Vehicles (Threshold > 60) | Avg Speed: 13.0 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 17 | Time: 2026-11-07 15:01:44
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #05
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 108 Vehicles (Threshold > 60) | Avg Speed: 8.8 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 20 | Time: 2026-11-07 15:01:48
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #06
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 71 Vehicles (Threshold > 60) | Avg Speed: 8.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 31 | Time: 2026-11-07 15:01:32
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #07
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 76 Vehicles (Threshold > 60) | Avg Speed: 6.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 36 | Time: 2026-11-07 15:01:38
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #08
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 97 Vehicles | Avg Speed: 15.5 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 39 | Time: 2026-11-07 15:01:40
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - WARNING CONGESTION] #09
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 86 Vehicles | Avg Speed: 15.0 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 40 | Time: 2026-11-07 15:01:41
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #10
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 77 Vehicles (Threshold > 60) | Avg Speed: 9.2 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 46 | Time: 2026-11-07 15:01:48
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #11
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 87 Vehicles (Threshold > 60) | Avg Speed: 12.1 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 47 | Time: 2026-11-07 15:01:50
+  Action    : Dispatching traffic warden to MSRIT Main Gate (Mathikere); Triggering signal cycle extension.
+
+
+--- REAL KAFKA STREAM SESSION: USN 1MS24CI060 | START: 2026-11-07 16:15:36.925554 ---
+
+--- REAL KAFKA STREAM SESSION: USN 1MS24CI060 | START: 2026-11-07 16:18:56.623370 ---
+[ALERT - CRITICAL CONGESTION] #01
+  Junction  : Mathikere Post Office Cross (SENSOR_1MS24CI060_MATHIKERE)
+  Metrics   : 112 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 2, Offset 2 | Time: 2026-11-07 15:32:21
+  Action    : Dispatching traffic warden to Mathikere Post Office Cross; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #02
+  Junction  : Mathikere Post Office Cross (SENSOR_1MS24CI060_MATHIKERE)
+  Metrics   : 112 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 2, Offset 6 | Time: 2026-11-07 16:14:17
+  Action    : Dispatching traffic warden to Mathikere Post Office Cross; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #03
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 64 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 0 | Time: 2026-11-07 15:32:18
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #04
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 83 Vehicles | Avg Speed: 19.1 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 0, Offset 2 | Time: 2026-11-07 15:32:26
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #05
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 67 Vehicles (Threshold > 60) | Avg Speed: 13.0 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 3 | Time: 2026-11-07 15:32:28
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #06
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 108 Vehicles (Threshold > 60) | Avg Speed: 8.8 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 6 | Time: 2026-11-07 15:32:32
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #07
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 64 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 9 | Time: 2026-11-07 16:14:14
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #08
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 83 Vehicles | Avg Speed: 19.1 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 0, Offset 11 | Time: 2026-11-07 16:14:22
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #09
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 67 Vehicles (Threshold > 60) | Avg Speed: 13.0 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 12 | Time: 2026-11-07 16:14:24
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #10
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 108 Vehicles (Threshold > 60) | Avg Speed: 8.8 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 15 | Time: 2026-11-07 16:14:28
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #11
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 71 Vehicles (Threshold > 60) | Avg Speed: 8.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 0 | Time: 2026-11-07 15:32:16
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #12
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 76 Vehicles (Threshold > 60) | Avg Speed: 6.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 5 | Time: 2026-11-07 15:32:22
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #13
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 97 Vehicles | Avg Speed: 15.5 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 8 | Time: 2026-11-07 15:32:24
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - WARNING CONGESTION] #14
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 86 Vehicles | Avg Speed: 15.0 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 9 | Time: 2026-11-07 15:32:25
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #15
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 77 Vehicles (Threshold > 60) | Avg Speed: 9.2 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 15 | Time: 2026-11-07 15:32:32
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #16
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 87 Vehicles (Threshold > 60) | Avg Speed: 12.1 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 16 | Time: 2026-11-07 15:32:34
+  Action    : Dispatching traffic warden to MSRIT Main Gate (Mathikere); Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #17
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 71 Vehicles (Threshold > 60) | Avg Speed: 8.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 17 | Time: 2026-11-07 16:14:12
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #18
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 76 Vehicles (Threshold > 60) | Avg Speed: 6.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 22 | Time: 2026-11-07 16:14:18
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #19
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 97 Vehicles | Avg Speed: 15.5 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 25 | Time: 2026-11-07 16:14:20
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - WARNING CONGESTION] #20
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 86 Vehicles | Avg Speed: 15.0 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 26 | Time: 2026-11-07 16:14:21
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #21
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 77 Vehicles (Threshold > 60) | Avg Speed: 9.2 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 32 | Time: 2026-11-07 16:14:28
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #22
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 87 Vehicles (Threshold > 60) | Avg Speed: 12.1 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 33 | Time: 2026-11-07 16:14:30
+  Action    : Dispatching traffic warden to MSRIT Main Gate (Mathikere); Triggering signal cycle extension.
+
+
+--- REAL KAFKA STREAM SESSION: USN 1MS24CI060 | START: 2026-11-07 16:21:38.030873 ---
+
+--- REAL KAFKA STREAM SESSION: USN 1MS24CI060 | START: 2026-11-07 16:26:41.246621 ---
+
+--- REAL KAFKA STREAM SESSION: USN 1MS24CI060 | START: 2026-11-07 16:30:49.818122 ---
+[ALERT - CRITICAL CONGESTION] #01
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 71 Vehicles (Threshold > 60) | Avg Speed: 8.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 34 | Time: 2026-11-07 16:30:34
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #02
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 76 Vehicles (Threshold > 60) | Avg Speed: 6.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 39 | Time: 2026-11-07 16:30:40
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #03
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 97 Vehicles | Avg Speed: 15.5 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 42 | Time: 2026-11-07 16:30:42
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - WARNING CONGESTION] #04
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 86 Vehicles | Avg Speed: 15.0 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 43 | Time: 2026-11-07 16:30:43
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #05
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 77 Vehicles (Threshold > 60) | Avg Speed: 9.2 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 49 | Time: 2026-11-07 16:30:50
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #06
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 87 Vehicles (Threshold > 60) | Avg Speed: 12.1 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 50 | Time: 2026-11-07 16:30:52
+  Action    : Dispatching traffic warden to MSRIT Main Gate (Mathikere); Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #07
+  Junction  : Mathikere Post Office Cross (SENSOR_1MS24CI060_MATHIKERE)
+  Metrics   : 112 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 2, Offset 10 | Time: 2026-11-07 16:30:39
+  Action    : Dispatching traffic warden to Mathikere Post Office Cross; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #08
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 64 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 18 | Time: 2026-11-07 16:30:36
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #09
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 83 Vehicles | Avg Speed: 19.1 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 0, Offset 20 | Time: 2026-11-07 16:30:44
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #10
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 67 Vehicles (Threshold > 60) | Avg Speed: 13.0 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 21 | Time: 2026-11-07 16:30:46
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #11
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 108 Vehicles (Threshold > 60) | Avg Speed: 8.8 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 24 | Time: 2026-11-07 16:30:50
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+
+--- REAL KAFKA STREAM SESSION: USN 1MS24CI060 | START: 2026-11-07 16:31:23.966273 ---
+
+--- REAL KAFKA STREAM SESSION: USN 1MS24CI060 | START: 2026-11-07 16:32:04.175354 ---
+[ALERT - CRITICAL CONGESTION] #01
+  Junction  : Mathikere Post Office Cross (SENSOR_1MS24CI060_MATHIKERE)
+  Metrics   : 112 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 2, Offset 14 | Time: 2026-11-07 16:31:44
+  Action    : Dispatching traffic warden to Mathikere Post Office Cross; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #02
+  Junction  : Mathikere Post Office Cross (SENSOR_1MS24CI060_MATHIKERE)
+  Metrics   : 112 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 2, Offset 18 | Time: 2026-11-07 16:32:04
+  Action    : Dispatching traffic warden to Mathikere Post Office Cross; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #03
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 64 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 27 | Time: 2026-11-07 16:31:41
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #04
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 83 Vehicles | Avg Speed: 19.1 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 0, Offset 29 | Time: 2026-11-07 16:31:49
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #05
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 67 Vehicles (Threshold > 60) | Avg Speed: 13.0 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 30 | Time: 2026-11-07 16:31:51
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #06
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 108 Vehicles (Threshold > 60) | Avg Speed: 8.8 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 33 | Time: 2026-11-07 16:31:55
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #07
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 64 Vehicles (Threshold > 60) | Avg Speed: 8.5 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 36 | Time: 2026-11-07 16:32:01
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #08
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 71 Vehicles (Threshold > 60) | Avg Speed: 8.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 51 | Time: 2026-11-07 16:31:39
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #09
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 76 Vehicles (Threshold > 60) | Avg Speed: 6.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 56 | Time: 2026-11-07 16:31:45
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #10
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 97 Vehicles | Avg Speed: 15.5 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 59 | Time: 2026-11-07 16:31:47
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - WARNING CONGESTION] #11
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 86 Vehicles | Avg Speed: 15.0 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 60 | Time: 2026-11-07 16:31:48
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #12
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 77 Vehicles (Threshold > 60) | Avg Speed: 9.2 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 66 | Time: 2026-11-07 16:31:55
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #13
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 71 Vehicles (Threshold > 60) | Avg Speed: 8.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 67 | Time: 2026-11-07 16:32:00
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #14
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 76 Vehicles (Threshold > 60) | Avg Speed: 6.9 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 72 | Time: 2026-11-07 16:32:05
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - WARNING CONGESTION] #15
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 97 Vehicles | Avg Speed: 15.5 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 75 | Time: 2026-11-07 16:32:07
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - WARNING CONGESTION] #16
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 86 Vehicles | Avg Speed: 15.0 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 1, Offset 76 | Time: 2026-11-07 16:32:08
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - WARNING CONGESTION] #17
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 83 Vehicles | Avg Speed: 19.1 km/h (< 25.0 km/h)
+  Kafka Pos : Partition 0, Offset 38 | Time: 2026-11-07 16:32:09
+  Action    : Traffic advisory broadcasted to regional control room.
+
+[ALERT - CRITICAL CONGESTION] #18
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 67 Vehicles (Threshold > 60) | Avg Speed: 13.0 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 39 | Time: 2026-11-07 16:32:11
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #19
+  Junction  : Yeshwanthpur Junction (SENSOR_1MS24CI060_YESHWANTHPUR)
+  Metrics   : 108 Vehicles (Threshold > 60) | Avg Speed: 8.8 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 0, Offset 42 | Time: 2026-11-07 16:32:15
+  Action    : Dispatching traffic warden to Yeshwanthpur Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #20
+  Junction  : Hebbal Flyover Junction (SENSOR_1MS24CI060_HEBBAL)
+  Metrics   : 77 Vehicles (Threshold > 60) | Avg Speed: 9.2 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 82 | Time: 2026-11-07 16:32:15
+  Action    : Dispatching traffic warden to Hebbal Flyover Junction; Triggering signal cycle extension.
+
+[ALERT - CRITICAL CONGESTION] #21
+  Junction  : MSRIT Main Gate (Mathikere) (SENSOR_1MS24CI060_MSR_GATE)
+  Metrics   : 87 Vehicles (Threshold > 60) | Avg Speed: 12.1 km/h (< 15.0 km/h)
+  Kafka Pos : Partition 1, Offset 83 | Time: 2026-11-07 16:32:17
+  Action    : Dispatching traffic warden to MSRIT Main Gate (Mathikere); Triggering signal cycle extension.
+

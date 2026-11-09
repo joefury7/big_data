@@ -1,0 +1,30 @@
+# ==============================================================================
+# GITIGNORE FOR BIG DATA ENTERPRISE REPOSITORY (USN: 1MS24CI060)
+# ==============================================================================
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Apache Derby / Hive Metastore Lock & Temp files
+metastore_db/*.lck
+metastore_db/tmp/
+derby.log
+
+# Operating System & Editor specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Background task logs & ephemeral system logs
+*.tmp

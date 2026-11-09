@@ -1,0 +1,280 @@
+
+======================================================================
+REAL FLINK MONITORING SESSION: USN 1MS24CI060 | START: 2026-11-04 14:52:03.736843
+======================================================================
+[ALERT #01] 2026-11-04 14:51:36 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=96%, Temp=36.9C
+
+[ALERT #02] 2026-11-04 14:51:37 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=94%, Temp=36.5C
+
+[ALERT #03] 2026-11-04 14:51:38 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: TACHYCARDIA ALERT (113 bpm > 110), HYPOXEMIA DESATURATION (87% < 92%)
+  Telemetry : HR=113 bpm, SpO2=87%, Temp=37.6C
+
+[ALERT #04] 2026-11-04 14:51:40 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: HYPOXEMIA DESATURATION (85% < 92%)
+  Telemetry : HR=99 bpm, SpO2=85%, Temp=37.4C
+
+[ALERT #05] 2026-11-04 14:51:47 | PATIENT_1MS24CI060_03 (Patient Gamma) | Step-Down Ward Bed 205
+  Violations: CRITICAL BRADYCARDIA (47 bpm < 50)
+  Telemetry : HR=47 bpm, SpO2=94%, Temp=36.8C
+
+[ALERT #06] 2026-11-04 14:51:39 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (120 bpm > 110)
+  Telemetry : HR=120 bpm, SpO2=94%, Temp=37.3C
+
+[ALERT #07] 2026-11-04 14:51:41 | PATIENT_1MS24CI060_04 (Patient Delta) | Telemetry Ward Bed 310
+  Violations: HYPOXEMIA DESATURATION (86% < 92%)
+  Telemetry : HR=101 bpm, SpO2=86%, Temp=37.0C
+
+[ALERT #08] 2026-11-04 14:51:45 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: HIGH PYREXIA (39.5°C > 38.5°C)
+  Telemetry : HR=110 bpm, SpO2=94%, Temp=39.5C
+
+[ALERT #09] 2026-11-04 14:51:53 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (112 bpm > 110), HIGH PYREXIA (39.1°C > 38.5°C)
+  Telemetry : HR=112 bpm, SpO2=94%, Temp=39.1C
+
+
+======================================================================
+REAL FLINK MONITORING SESSION: USN 1MS24CI060 | START: 2026-11-04 15:02:37.430411
+======================================================================
+[ALERT #01] 2026-11-04 15:02:37 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=96%, Temp=36.9C
+
+[ALERT #02] 2026-11-04 15:02:38 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=94%, Temp=36.5C
+
+[ALERT #03] 2026-11-04 15:02:39 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: TACHYCARDIA ALERT (113 bpm > 110), HYPOXEMIA DESATURATION (87% < 92%)
+  Telemetry : HR=113 bpm, SpO2=87%, Temp=37.6C
+
+[ALERT #04] 2026-11-04 15:02:40 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (120 bpm > 110)
+  Telemetry : HR=120 bpm, SpO2=94%, Temp=37.3C
+
+[ALERT #05] 2026-11-04 15:02:41 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: HYPOXEMIA DESATURATION (85% < 92%)
+  Telemetry : HR=99 bpm, SpO2=85%, Temp=37.4C
+
+[ALERT #06] 2026-11-04 15:02:42 | PATIENT_1MS24CI060_04 (Patient Delta) | Telemetry Ward Bed 310
+  Violations: HYPOXEMIA DESATURATION (86% < 92%)
+  Telemetry : HR=101 bpm, SpO2=86%, Temp=37.0C
+
+[ALERT #07] 2026-11-04 15:02:46 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: HIGH PYREXIA (39.5°C > 38.5°C)
+  Telemetry : HR=110 bpm, SpO2=94%, Temp=39.5C
+
+[ALERT #08] 2026-11-04 15:02:48 | PATIENT_1MS24CI060_03 (Patient Gamma) | Step-Down Ward Bed 205
+  Violations: CRITICAL BRADYCARDIA (47 bpm < 50)
+  Telemetry : HR=47 bpm, SpO2=94%, Temp=36.8C
+
+[ALERT #09] 2026-11-04 15:02:54 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (112 bpm > 110), HIGH PYREXIA (39.1°C > 38.5°C)
+  Telemetry : HR=112 bpm, SpO2=94%, Temp=39.1C
+
+
+======================================================================
+REAL FLINK MONITORING SESSION: USN 1MS24CI060 | START: 2026-11-07 15:38:13.250456
+======================================================================
+[ALERT #01] 2026-11-07 15:37:46 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=96%, Temp=36.9C
+
+[ALERT #02] 2026-11-07 15:37:47 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=94%, Temp=36.5C
+
+[ALERT #03] 2026-11-07 15:37:47 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: TACHYCARDIA ALERT (113 bpm > 110), HYPOXEMIA DESATURATION (87% < 92%)
+  Telemetry : HR=113 bpm, SpO2=87%, Temp=37.6C
+
+[ALERT #04] 2026-11-07 15:37:50 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: HYPOXEMIA DESATURATION (85% < 92%)
+  Telemetry : HR=99 bpm, SpO2=85%, Temp=37.4C
+
+[ALERT #05] 2026-11-07 15:37:57 | PATIENT_1MS24CI060_03 (Patient Gamma) | Step-Down Ward Bed 205
+  Violations: CRITICAL BRADYCARDIA (47 bpm < 50)
+  Telemetry : HR=47 bpm, SpO2=94%, Temp=36.8C
+
+[ALERT #06] 2026-11-07 15:37:49 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (120 bpm > 110)
+  Telemetry : HR=120 bpm, SpO2=94%, Temp=37.3C
+
+[ALERT #07] 2026-11-07 15:37:50 | PATIENT_1MS24CI060_04 (Patient Delta) | Telemetry Ward Bed 310
+  Violations: HYPOXEMIA DESATURATION (86% < 92%)
+  Telemetry : HR=101 bpm, SpO2=86%, Temp=37.0C
+
+[ALERT #08] 2026-11-07 15:37:55 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: HIGH PYREXIA (39.5°C > 38.5°C)
+  Telemetry : HR=110 bpm, SpO2=94%, Temp=39.5C
+
+[ALERT #09] 2026-11-07 15:38:03 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (112 bpm > 110), HIGH PYREXIA (39.1°C > 38.5°C)
+  Telemetry : HR=112 bpm, SpO2=94%, Temp=39.1C
+
+
+======================================================================
+REAL FLINK MONITORING SESSION: USN 1MS24CI060 | START: 2026-11-07 16:33:34.693565
+======================================================================
+[ALERT #01] 2026-11-07 16:33:21 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (120 bpm > 110)
+  Telemetry : HR=120 bpm, SpO2=94%, Temp=37.3C
+
+[ALERT #02] 2026-11-07 16:33:22 | PATIENT_1MS24CI060_04 (Patient Delta) | Telemetry Ward Bed 310
+  Violations: HYPOXEMIA DESATURATION (86% < 92%)
+  Telemetry : HR=101 bpm, SpO2=86%, Temp=37.0C
+
+[ALERT #03] 2026-11-07 16:33:27 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: HIGH PYREXIA (39.5°C > 38.5°C)
+  Telemetry : HR=110 bpm, SpO2=94%, Temp=39.5C
+
+[ALERT #04] 2026-11-07 16:33:35 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (112 bpm > 110), HIGH PYREXIA (39.1°C > 38.5°C)
+  Telemetry : HR=112 bpm, SpO2=94%, Temp=39.1C
+
+[ALERT #05] 2026-11-07 16:33:18 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=96%, Temp=36.9C
+
+[ALERT #06] 2026-11-07 16:33:19 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=94%, Temp=36.5C
+
+[ALERT #07] 2026-11-07 16:33:19 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: TACHYCARDIA ALERT (113 bpm > 110), HYPOXEMIA DESATURATION (87% < 92%)
+  Telemetry : HR=113 bpm, SpO2=87%, Temp=37.6C
+
+[ALERT #08] 2026-11-07 16:33:22 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: HYPOXEMIA DESATURATION (85% < 92%)
+  Telemetry : HR=99 bpm, SpO2=85%, Temp=37.4C
+
+[ALERT #09] 2026-11-07 16:33:29 | PATIENT_1MS24CI060_03 (Patient Gamma) | Step-Down Ward Bed 205
+  Violations: CRITICAL BRADYCARDIA (47 bpm < 50)
+  Telemetry : HR=47 bpm, SpO2=94%, Temp=36.8C
+
+
+======================================================================
+REAL FLINK MONITORING SESSION: USN 1MS24CI060 | START: 2026-11-07 16:43:02.770454
+======================================================================
+[ALERT #01] 2026-11-07 16:42:42 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=96%, Temp=36.9C
+
+[ALERT #02] 2026-11-07 16:42:43 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=94%, Temp=36.5C
+
+[ALERT #03] 2026-11-07 16:42:44 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: TACHYCARDIA ALERT (113 bpm > 110), HYPOXEMIA DESATURATION (87% < 92%)
+  Telemetry : HR=113 bpm, SpO2=87%, Temp=37.6C
+
+[ALERT #04] 2026-11-07 16:42:46 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: HYPOXEMIA DESATURATION (85% < 92%)
+  Telemetry : HR=99 bpm, SpO2=85%, Temp=37.4C
+
+[ALERT #05] 2026-11-07 16:42:53 | PATIENT_1MS24CI060_03 (Patient Gamma) | Step-Down Ward Bed 205
+  Violations: CRITICAL BRADYCARDIA (47 bpm < 50)
+  Telemetry : HR=47 bpm, SpO2=94%, Temp=36.8C
+
+[ALERT #06] 2026-11-07 16:42:45 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (120 bpm > 110)
+  Telemetry : HR=120 bpm, SpO2=94%, Temp=37.3C
+
+[ALERT #07] 2026-11-07 16:42:47 | PATIENT_1MS24CI060_04 (Patient Delta) | Telemetry Ward Bed 310
+  Violations: HYPOXEMIA DESATURATION (86% < 92%)
+  Telemetry : HR=101 bpm, SpO2=86%, Temp=37.0C
+
+[ALERT #08] 2026-11-07 16:42:51 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: HIGH PYREXIA (39.5°C > 38.5°C)
+  Telemetry : HR=110 bpm, SpO2=94%, Temp=39.5C
+
+[ALERT #09] 2026-11-07 16:42:59 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (112 bpm > 110), HIGH PYREXIA (39.1°C > 38.5°C)
+  Telemetry : HR=112 bpm, SpO2=94%, Temp=39.1C
+
+
+======================================================================
+REAL FLINK MONITORING SESSION: USN 1MS24CI060 | START: 2026-11-07 16:44:47.703134
+======================================================================
+[ALERT #01] 2026-11-07 16:44:44 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=96%, Temp=36.9C
+
+[ALERT #02] 2026-11-07 16:44:45 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=94%, Temp=36.5C
+
+[ALERT #03] 2026-11-07 16:44:46 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: TACHYCARDIA ALERT (113 bpm > 110), HYPOXEMIA DESATURATION (87% < 92%)
+  Telemetry : HR=113 bpm, SpO2=87%, Temp=37.6C
+
+[ALERT #04] 2026-11-07 16:44:48 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: HYPOXEMIA DESATURATION (85% < 92%)
+  Telemetry : HR=99 bpm, SpO2=85%, Temp=37.4C
+
+[ALERT #05] 2026-11-07 16:44:47 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (120 bpm > 110)
+  Telemetry : HR=120 bpm, SpO2=94%, Temp=37.3C
+
+[ALERT #06] 2026-11-07 16:44:49 | PATIENT_1MS24CI060_04 (Patient Delta) | Telemetry Ward Bed 310
+  Violations: HYPOXEMIA DESATURATION (86% < 92%)
+  Telemetry : HR=101 bpm, SpO2=86%, Temp=37.0C
+
+[ALERT #07] 2026-11-07 16:44:53 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: HIGH PYREXIA (39.5°C > 38.5°C)
+  Telemetry : HR=110 bpm, SpO2=94%, Temp=39.5C
+
+[ALERT #08] 2026-11-07 16:44:55 | PATIENT_1MS24CI060_03 (Patient Gamma) | Step-Down Ward Bed 205
+  Violations: CRITICAL BRADYCARDIA (47 bpm < 50)
+  Telemetry : HR=47 bpm, SpO2=94%, Temp=36.8C
+
+[ALERT #09] 2026-11-07 16:45:01 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (112 bpm > 110), HIGH PYREXIA (39.1°C > 38.5°C)
+  Telemetry : HR=112 bpm, SpO2=94%, Temp=39.1C
+
+
+======================================================================
+REAL FLINK MONITORING SESSION: USN 1MS24CI060 | START: 2026-11-07 16:45:49.088371
+======================================================================
+[ALERT #01] 2026-11-07 16:45:51 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (120 bpm > 110)
+  Telemetry : HR=120 bpm, SpO2=94%, Temp=37.3C
+
+[ALERT #02] 2026-11-07 16:45:48 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=96%, Temp=36.9C
+
+[ALERT #03] 2026-11-07 16:45:49 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: CRITICAL BRADYCARDIA (46 bpm < 50)
+  Telemetry : HR=46 bpm, SpO2=94%, Temp=36.5C
+
+[ALERT #04] 2026-11-07 16:45:49 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: TACHYCARDIA ALERT (113 bpm > 110), HYPOXEMIA DESATURATION (87% < 92%)
+  Telemetry : HR=113 bpm, SpO2=87%, Temp=37.6C
+
+[ALERT #05] 2026-11-07 16:45:52 | PATIENT_1MS24CI060_02 (Patient Beta) | ICU Bed 102
+  Violations: HYPOXEMIA DESATURATION (85% < 92%)
+  Telemetry : HR=99 bpm, SpO2=85%, Temp=37.4C
+
+[ALERT #06] 2026-11-07 16:45:52 | PATIENT_1MS24CI060_04 (Patient Delta) | Telemetry Ward Bed 310
+  Violations: HYPOXEMIA DESATURATION (86% < 92%)
+  Telemetry : HR=101 bpm, SpO2=86%, Temp=37.0C
+
+[ALERT #07] 2026-11-07 16:45:57 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: HIGH PYREXIA (39.5°C > 38.5°C)
+  Telemetry : HR=110 bpm, SpO2=94%, Temp=39.5C
+
+[ALERT #08] 2026-11-07 16:45:59 | PATIENT_1MS24CI060_03 (Patient Gamma) | Step-Down Ward Bed 205
+  Violations: CRITICAL BRADYCARDIA (47 bpm < 50)
+  Telemetry : HR=47 bpm, SpO2=94%, Temp=36.8C
+
+[ALERT #09] 2026-11-07 16:46:05 | PATIENT_1MS24CI060_01 (Patient Alpha) | ICU Bed 101
+  Violations: TACHYCARDIA ALERT (112 bpm > 110), HIGH PYREXIA (39.1°C > 38.5°C)
+  Telemetry : HR=112 bpm, SpO2=94%, Temp=39.1C
+
