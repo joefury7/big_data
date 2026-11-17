@@ -302,6 +302,36 @@ Documentation & Professional formatting, complete verification proofs, and clear
 \end{longtable}
 \par}
 
+\vspace{0.8cm}
+
+\section*{Consolidated Report Submission Structure}
+{\sizeTwelve In accordance with the academic submission guidelines, each of the five self-learning activity components in this consolidated report is systematically documented across the following six standardized sections:\par}
+
+\vspace{0.4cm}
+
+{\sizeTwelve
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|>{\centering\arraybackslash}p{1.2cm}|>{\raggedright\arraybackslash}p{4.2cm}|>{\raggedright\arraybackslash}p{9.8cm}|}
+\hline
+\textbf{Sl. No.} & \textbf{Component} & \textbf{Description} \\
+\hline
+\endhead
+1 & Problem definition & Clearly explain the real-world problem and objectives. \\
+\hline
+2 & Technology study & Describe the selected technology, architecture, and relevant concepts. \\
+\hline
+3 & Implementation & Include the procedure, queries or code, and configuration details as applicable. \\
+\hline
+4 & Results & Provide screenshots, sample outputs, tables, or visualizations. \\
+\hline
+5 & Analysis & Interpret the results and explain how the solution addresses the problem. \\
+\hline
+6 & Conclusion & Summarize findings, limitations, and possible improvements. \\
+\hline
+\end{longtable}
+\par}
+
 \newpage
 
 % ======================================================
@@ -853,7 +883,7 @@ mongosh --eval "db.version()"
 \end{lstlisting}
 
 \subsubsection*{Step 2: Compound Indexing \& Aggregation Pipeline Script}
-\begin{lstlisting}[language=JavaScript]
+\begin{lstlisting}[language=Java]
 // Create compound B-Tree index
 db.products_catalog_060.createIndex({ category: 1, price: 1 });
 
