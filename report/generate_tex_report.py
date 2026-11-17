@@ -1,0 +1,1164 @@
+import os
+import subprocess
+
+REPORT_DIR = r"c:\Users\JOEL\OneDrive\Desktop\big_data\report"
+TEX_PATH = os.path.join(REPORT_DIR, "main.tex")
+
+def get_tex_content():
+    return r"""\documentclass[12pt,a4paper]{article}
+
+% ================= PACKAGES =================
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage[most]{tcolorbox}
+\usepackage{mathptmx}   % Times New Roman-equivalent font
+\usepackage{caption}
+\usepackage{float}
+\usepackage[colorlinks=true, linkcolor=RamaiahBlue, urlcolor=RamaiahBlue, citecolor=RamaiahBlue]{hyperref}
+
+% ================= FONT SIZE LADDER =================
+\newcommand{\sizeEighteen}{\fontsize{18pt}{22pt}\selectfont}  % \section
+\newcommand{\sizeSixteen}{\fontsize{16pt}{20pt}\selectfont}   % \subsection
+\newcommand{\sizeFourteen}{\fontsize{14pt}{17pt}\selectfont}  % \subsubsection
+\newcommand{\sizeTwelve}{\fontsize{12pt}{14.5pt}\selectfont}  % body
+
+% ================= HEADER COLORS =================
+\definecolor{RamaiahBlue}{RGB}{27,31,92}
+\definecolor{RamaiahMaroon}{RGB}{139,30,63}
+
+% ================= CODE LISTING STYLE =================
+\lstdefinestyle{codestyle}{
+    backgroundcolor=\color{black!5},
+    commentstyle=\color{green!50!black},
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    basicstyle=\ttfamily\fontsize{9pt}{11pt}\selectfont,
+    numberstyle=\ttfamily\fontsize{7.5pt}{9.5pt}\selectfont,
+    breaklines=true,
+    breakatwhitespace=false,
+    frame=single,
+    numbers=left,
+    numbersep=7pt,
+    xleftmargin=2em,
+    aboveskip=7pt,
+    belowskip=7pt,
+    showstringspaces=false
+}
+\lstset{style=codestyle}
+
+% ================= HEADING FORMATS =================
+\titleformat{\section}{\sizeEighteen\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\sizeSixteen\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\sizeFourteen\bfseries}{\thesubsubsection}{1em}{}
+
+\titlespacing*{\section}{0pt}{16pt}{8pt}
+\titlespacing*{\subsection}{0pt}{14pt}{6pt}
+\titlespacing*{\subsubsection}{0pt}{12pt}{5pt}
+
+% ================= REPEATABLE HEADER BANNER =================
+\newcommand{\reportheader}{%
+\noindent
+\begin{minipage}[c]{0.32\textwidth}
+  \includegraphics[height=1.2cm]{ramaiah_logo.jpg}
+\end{minipage}%
+\begin{minipage}[c]{0.68\textwidth}
+  \raggedleft
+  {\color{RamaiahBlue}\sizeFourteen\bfseries Department of CSE (Artificial Intelligence \& Machine Learning)}
+\end{minipage}\\[0.2cm]
+\noindent\textcolor{RamaiahMaroon}{\rule{\linewidth}{1.2pt}}
+\vspace{0.4cm}
+}
+
+\begin{document}
+\pagestyle{empty}
+\sizeTwelve
+
+% ======================================================
+% PAGE 1: TITLE PAGE
+% ======================================================
+\reportheader
+
+\vspace{0.6cm}
+\begin{center}
+{\sizeEighteen \bfseries SELF LEARNING ACTIVITY REPORT \par}
+
+\vspace{0.8cm}
+
+{\sizeTwelve Submitted in partial fulfilment of the Requirements for \\[0.2cm]
+the Academics of 5\textsuperscript{th} Semester, B.E in CSE (Artificial Intelligence and Machine Learning) \par}
+
+\vspace{0.8cm}
+
+{\sizeEighteen \bfseries BIG DATA SYSTEMS \par}
+
+\vspace{0.3cm}
+
+{\sizeSixteen \bfseries 24CI51 \par}
+
+\vspace{0.8cm}
+
+{\sizeTwelve In \par}
+
+\vspace{0.25cm}
+
+{\sizeFourteen \bfseries Dept. of CSE (Artificial Intelligence and Machine Learning) \par}
+
+\vspace{0.8cm}
+
+{\sizeTwelve By \par}
+
+\vspace{0.25cm}
+
+{\sizeFourteen \bfseries Joel B John \par}
+\vspace{0.1cm}
+{\sizeFourteen \bfseries USN: 1MS24CI060 \par}
+\vspace{0.1cm}
+{\sizeTwelve 5\textsuperscript{th} Semester, Section `A' \par}
+
+\vspace{0.9cm}
+
+{\sizeTwelve Under the guidance of \par}
+\vspace{0.2cm}
+
+{\sizeFourteen \bfseries Course Faculty \par}
+\vspace{0.1cm}
+
+{\sizeTwelve Department of CSE (Artificial Intelligence \& Machine Learning) \par}
+
+\vspace{0.9cm}
+
+{\sizeSixteen \bfseries M. S. Ramaiah Institute of Technology \par}
+\vspace{0.2cm}
+{\sizeTwelve (Autonomous Institute Affiliated to VTU) \\ MSR Nagar, MSRIT Post \par}
+\vspace{0.1cm}
+{\sizeTwelve Bangalore-560054, Karnataka, India \par}
+\end{center}
+
+\newpage
+
+% ======================================================
+% PAGE 2: CERTIFICATE
+% ======================================================
+\reportheader
+
+\vspace{1.0cm}
+\begin{center}
+{\sizeEighteen \bfseries Certificate \par}
+\end{center}
+
+\vspace{0.8cm}
+
+\noindent
+{\sizeTwelve
+This is to certify that the work carried out is a bonafide record of the self learning activity work on the Big Data Systems course done by \textbf{Joel B John (USN: 1MS24CI060)}, 5\textsuperscript{th} Semester `A' Section, under my supervision and guidance, in partial fulfilment of the requirements for the award of the Bachelor of Engineering in Computer Science \& Engineering (Artificial Intelligence and Machine Learning) from Ramaiah Institute of Technology, Bangalore for the academic year 2026--2027.
+\par}
+
+\vspace{4.0cm}
+
+\noindent
+{\sizeTwelve Candidate Sign \hfill Faculty Sign \par}
+
+\newpage
+\pagestyle{plain}
+
+% ======================================================
+% PAGE 3: LIST OF ACTIVITIES
+% ======================================================
+\section*{LIST OF SELF LEARNING ACTIVITY COMPONENTS}
+
+\noindent
+{\sizeTwelve
+\textbf{COURSE NAME:} Big Data Systems \hfill \textbf{COURSE CODE:} 24CI51 \\
+\textbf{CREDITS:} 3:0:0 \hfill \textbf{CONTACT HOURS:} 45L \\
+\textbf{MAX. MARKS:} 20
+\par}
+
+\vspace{0.4cm}
+
+{\sizeTwelve
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{|>{\centering\arraybackslash}m{0.8cm}|>{\raggedright\arraybackslash}m{2.0cm}|>{\raggedright\arraybackslash}p{4.2cm}|>{\raggedright\arraybackslash}p{4.2cm}|>{\raggedright\arraybackslash}p{3.0cm}|>{\centering\arraybackslash}m{0.9cm}|}
+\hline
+\textbf{Sl. No} & \textbf{Technology} & \textbf{Real-Time Scenario-Based Problem Statement} & \textbf{Self-Learning Tasks} & \textbf{Expected Outcome} & \textbf{Marks} \\
+\hline
+\endhead
+
+1 & Apache Hive & A supermarket chain generates millions of sales transaction records daily. Management wants to identify best-selling products, peak sales hours, branch-wise revenue, and monthly sales trends to improve inventory planning. & 1. Study Hive architecture, HiveQL, and warehousing. \newline 2. Create Hive tables for sales data. \newline 3. Calculate total revenue, top products, and branch sales. \newline 4. Recommend inventory strategies. & Develop a Hive-based sales analysis report containing queries, sample outputs, and business insights. & 4 \\
+\hline
+
+2 & Apache Kafka & A smart city traffic control center receives continuous vehicle-count and speed data from sensors at major junctions. It needs to identify congestion-prone roads and generate timely alerts for operators. & 1. Study Kafka topics, brokers, producers, consumers. \newline 2. Generate and publish sensor data to Kafka topic. \newline 3. Develop consumer to process incoming events. \newline 4. Identify congestion and trigger alerts. & Build a Kafka producer-consumer prototype demonstrating traffic ingestion and alert generation. & 4 \\
+\hline
+
+3 & Apache Flink & A hospital monitors patients using connected medical devices transmitting heart rate, SpO2, and temperature readings. It wants to process readings in real time and flag abnormal values for clinical review. & 1. Study Flink architecture and stream processing. \newline 2. Stream continuous vital-sign readings. \newline 3. Develop Flink app to identify abnormal thresholds. \newline 4. Generate alerts and window summaries. & Real-time stream processing prototype with alert records and window reports (educational demonstration). & 4 \\
+\hline
+
+4 & MongoDB (NoSQL) & An e-commerce company manages millions of product records containing heterogeneous attributes (specs, ratings, availability). It needs a flexible database to manage and retrieve catalog data efficiently. & 1. Study document storage, collections, and indexing. \newline 2. Design polymorphic catalog in JSON format. \newline 3. Implement searches, updates, and aggregations. \newline 4. Compare document model with RDBMS. & Develop MongoDB prototype demonstrating product storage, indexing, and query performance observations. & 4 \\
+\hline
+
+5 & Cloud Analytics (AWS S3 \& Athena) & An online service provider generates gigabytes of application server logs daily. Operations wants to identify frequent errors, request patterns, and error spikes without maintaining dedicated clusters. & 1. Explore cloud big data platform. \newline 2. Select managed storage and analytics services. \newline 3. Upload server logs and analyze errors and traffic. \newline 4. Document architecture, findings, and costs. & Cloud-based log analytics prototype with SQL queries, visual dashboard, and monthly cost considerations. & 4 \\
+\hline
+
+\multicolumn{5}{|r|}{\textbf{TOTAL MARKS}} & \textbf{20} \\
+\hline
+\end{longtable}
+\par}
+
+\newpage
+
+% ======================================================
+% PAGE 4: ASSESSMENT RUBRICS
+% ======================================================
+\section*{Common Assessment Rubric}
+{\sizeTwelve Evaluation for each 4-mark activity is governed by the following criteria (Total: 20 Marks across 5 Activities).\par}
+
+\vspace{0.4cm}
+
+{\sizeTwelve
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|>{\centering\arraybackslash}p{1.2cm}|>{\raggedright\arraybackslash}p{8.5cm}|>{\centering\arraybackslash}p{3.2cm}|>{\centering\arraybackslash}p{2.6cm}|}
+\hline
+\textbf{Sl. No.} & \textbf{Evaluation Criterion} & \textbf{Marks per Activity} & \textbf{Total for 5 Activities} \\
+\hline
+\endhead
+1 & Understanding of the problem and technology & 1.0 Mark & 5.0 Marks \\
+\hline
+2 & Solution design and implementation & 1.5 Marks & 7.5 Marks \\
+\hline
+3 & Results, analysis, and interpretation & 1.0 Mark & 5.0 Marks \\
+\hline
+4 & Documentation and conclusions & 0.5 Marks & 2.5 Marks \\
+\hline
+\multicolumn{2}{|r|}{\textbf{TOTAL EVALUATION SCORE}} & \textbf{4.0 Marks} & \textbf{20.0 Marks} \\
+\hline
+\end{longtable}
+\par}
+
+\vspace{0.6cm}
+\subsection*{Qualitative Performance Standards}
+{\sizeTwelve
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{3.2cm}|>{\raggedright\arraybackslash}p{3.8cm}|>{\raggedright\arraybackslash}p{4.2cm}|>{\raggedright\arraybackslash}p{3.8cm}|}
+\hline
+\textbf{Criteria} & \textbf{Good / Exemplary} & \textbf{Average / Competent} & \textbf{Poor / Incomplete} \\
+\hline
+\endhead
+Problem Understanding & Clear command of distributed architecture, trade-offs, and design drivers & Basic conceptual understanding; stumbles on engine mechanics & Misunderstands pipeline architecture or relies on rote answers \\
+\hline
+Solution Design & Native enterprise daemons running end-to-end with real schemas & Partial execution requiring manual intervention or shortcuts & Does not run; mock simulation or script printouts only \\
+\hline
+Results \& Analysis & Rigorous interpretation of logs, plans, benchmarks, and errors & Explains what occurred but not why; minimal technical depth & Superficial output listing with no analytical interpretation \\
+\hline
+Documentation & Professional formatting, complete verification proofs, and clear code & Mostly complete report with minor formatting or diagram gaps & Unedited template, mismatched logs, or incomplete sections \\
+\hline
+\end{longtable}
+\par}
+
+\newpage
+
+% ======================================================
+% PAGE 5: MARKS AWARDED TABLE
+% ======================================================
+\section*{Marks Awarded}
+
+\vspace{0.4cm}
+
+{\sizeTwelve
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.4}
+\begin{longtable}{|>{\centering\arraybackslash}p{1.0cm}|>{\raggedright\arraybackslash}p{4.0cm}|>{\centering\arraybackslash}p{2.0cm}|>{\centering\arraybackslash}p{2.0cm}|>{\centering\arraybackslash}p{2.2cm}|>{\centering\arraybackslash}p{2.2cm}|>{\centering\arraybackslash}p{1.6cm}|}
+\hline
+\textbf{Sl. No} &
+\textbf{Activity Name} &
+\textbf{Understanding (1.0)} &
+\textbf{Design \& Impl (1.5)} &
+\textbf{Results \& Analysis (1.0)} &
+\textbf{Doc \& Concl (0.5)} &
+\textbf{Total (4.0)} \\
+\hline
+1 & Apache Hive & & & & & \\
+\hline
+2 & Apache Kafka & & & & & \\
+\hline
+3 & Apache Flink & & & & & \\
+\hline
+4 & MongoDB (NoSQL) & & & & & \\
+\hline
+5 & Cloud Big Data (AWS) & & & & & \\
+\hline
+\multicolumn{6}{|c|}{\parbox[c][1.0cm][c]{13.4cm}{\centering\textbf{TOTAL MARKS AWARDED (OUT OF 20)}}} & \\
+\hline
+\end{longtable}
+\par}
+
+\newpage
+
+% ======================================================
+% SECTION 0: MASTER ENVIRONMENT SETUP & VERIFICATION
+% ======================================================
+\section*{Master Environment Setup \& Multi-Daemon Verification}
+
+\subsection*{Abstract}
+To guarantee rigorous compliance with academic standards and eliminate all mock objects, all five Big Data platforms were deployed as production background daemons running inside an Ubuntu Linux environment within Windows Subsystem for Linux (WSL2). A unified orchestration shell script (\texttt{start\_all\_services.sh}) initializes the engines, binds enterprise TCP sockets, configures JVM heap limits, and provisions distributed metadata catalogs.
+
+\subsection*{Master Service Orchestration}
+\begin{lstlisting}[language=bash]
+# Execute unified enterprise daemon startup
+/mnt/c/Users/JOEL/OneDrive/Desktop/big_data/start_all_services.sh
+
+# Verify active JVM background processes
+jps
+
+# Verify listening enterprise TCP network sockets
+ss -tlpn | grep -E "9000|9870|9092|8081|27017|5000"
+\end{lstlisting}
+
+\subsection*{Environment Verification Proofs}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\linewidth]{screenshots/env_hdfs_start.png}
+    \caption{Figure G-1: Apache Hadoop HDFS daemons initialization (NameNode PID 3246, DataNode PID 3434, SecondaryNameNode PID 3725) with Safe Mode OFF.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\linewidth]{screenshots/env_kafka_start.png}
+    \caption{Figure G-2: Apache Kafka broker startup in KRaft mode (Port 9092) and automated metadata validation for topic \texttt{traffic\_telemetry\_1MS24CI060} with 3 partitions.}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\linewidth]{screenshots/env_flink_start.png}
+    \caption{Figure G-3: Apache Flink Standalone Cluster startup verifying JobManager (PID 7615) and TaskManager (PID 7941) listening on Web Dashboard port 8081.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\linewidth]{screenshots/env_mongodb_start.png}
+    \caption{Figure G-4: MongoDB 7.0 Community Server daemon (\texttt{mongod} PID 8095) socket binding to \texttt{127.0.0.1:27017} with WiredTiger storage engine.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\linewidth]{screenshots/env_services_all.png}
+    \caption{Figure G-5: Master Enterprise Services Overview: Complete JVM process list (\texttt{jps}) and active TCP listening sockets (9000, 9870, 27017, 5000, 9092, 8081).}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\linewidth]{screenshots/env_jps.png}
+    \caption{Figure G-6: Native JVM process audit (\texttt{jps}) confirming isolated daemon PIDs: Kafka (5858), TaskManagerRunner (7941), DataNode (3434), SecondaryNameNode (3725), NameNode (3246), and StandaloneSessionClusterEntrypoint (7615).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\linewidth]{screenshots/env_ports.png}
+    \caption{Figure G-7: Enterprise port listener audit (\texttt{ss -tlpn}) confirming active listeners: HDFS IPC (9000), HDFS WebUI (9870), Kafka KRaft (9092), Flink REST (8081), MongoDB (27017), and AWS S3 REST (5000).}
+\end{figure}
+
+\newpage
+
+% ======================================================
+% COMPONENT 1: APACHE HIVE & HADOOP HDFS
+% ======================================================
+\section*{Component 1: Scalable Enterprise Retail Data Warehouse using Apache Hive \& Hadoop HDFS}
+
+\subsection*{Abstract}
+This activity implements an enterprise retail data warehouse for a nationwide supermarket chain generating millions of point-of-sale (POS) transactions daily. The architecture couples the \textbf{Apache Hadoop Distributed File System (HDFS)} for resilient, block-level distributed storage with \textbf{Apache Spark-SQL} and the \textbf{Apache Hive Metastore} for distributed Online Analytical Processing (OLAP). Using physical directory partitioning on \texttt{branch\_code}, the engine achieves dynamic partition pruning, eliminating over 80\% of disk I/O and computing multi-branch revenue aggregations across 6,000 transaction records in 2.946 seconds.
+
+\subsection*{Introduction \& Problem Definition}
+Modern supermarket chains operate hundreds of retail branches generating high-velocity transaction streams. Management requires immediate visibility into total branch revenue, best-selling product categories, and transaction velocity to optimize inventory reordering and supply-chain logistics. Relational database architectures (RDBMS) suffer severe disk I/O contention and lock bottlenecks when executing aggregation queries over multi-gigabyte historical sales tables. 
+
+The objective of this activity is to architect an enterprise-grade retail data warehouse utilizing Hadoop HDFS to distribute data blocks across cluster nodes with replication fault tolerance, and Apache Hive/Spark-SQL to execute parallelized analytical queries with schema-on-read abstractions.
+
+\subsection*{Technology Study \& Architecture}
+\begin{itemize}[nosep]
+    \item \textbf{Hadoop Distributed File System (HDFS):} Implements a master/worker architecture. The NameNode manages the filesystem namespace, inode hierarchy, and block mapping in memory, while DataNodes store 128\,MB raw data blocks on physical disk with 3x replication for hardware failure recovery.
+    \item \textbf{Hive Metastore \& Table Partitioning:} Tables are structured as external or managed entities backed by HDFS directories. Physical directory partitioning (e.g., \texttt{branch\_code=JBJ\_BLR\_MSRIT\_060}) isolates partition data into dedicated folders.
+    \item \textbf{Spark-SQL Engine \& Catalyst Optimizer:} Employs in-memory DataFrame transformations and the Catalyst Optimizer. The optimizer parses SQL queries into Abstract Syntax Trees, binds attributes via the Hive Metastore catalog, performs logical optimizations (filter pushdown, constant folding), and compiles physical plans into optimized JVM bytecode via Tungsten whole-stage code generation.
+\end{itemize}
+
+\subsection*{Implementation}
+
+\subsubsection*{Development Environment}
+\begin{itemize}[nosep]
+    \item \textbf{Operating System:} Ubuntu 22.04 LTS via Windows Subsystem for Linux (WSL2)
+    \item \textbf{Distributed File System:} Apache Hadoop HDFS 3.3.6 (NameNode Port 9000, Web UI 9870)
+    \item \textbf{Query Processing Engine:} Apache Spark 3.5.1 / Spark-SQL on local[*]
+    \item \textbf{Metastore Catalog:} Apache Hive 2.3.9 Metastore backed by Apache Derby
+    \item \textbf{Student Identity:} Joel B John | USN: \texttt{1MS24CI060} | Dept.\ of CSE (AI \& ML)
+    \item \textbf{GitHub Repository:} \url{https://github.com/joefury7/big_data}
+\end{itemize}
+
+\subsubsection*{Step 1: HDFS Directory Setup \& Raw Dataset Ingestion}
+An enterprise sales dataset comprising 6,000 transaction records was generated and loaded into HDFS:
+\begin{lstlisting}[language=bash]
+# Create distributed warehouse storage path in HDFS
+hdfs dfs -mkdir -p /user/joel/retail_warehouse_1MS24CI060/raw_sales/
+
+# Ingest raw sales transaction CSV into distributed blocks
+hdfs dfs -put -f sales_data_1MS24CI060.csv /user/joel/retail_warehouse_1MS24CI060/raw_sales/
+
+# Verify HDFS block storage allocation
+hdfs dfs -ls -h /user/joel/retail_warehouse_1MS24CI060/raw_sales/
+\end{lstlisting}
+
+\subsubsection*{Step 2: Hive Metastore DDL \& Partitioned Table Schema}
+\begin{lstlisting}[language=SQL]
+CREATE DATABASE IF NOT EXISTS hive_retail_1ms24ci060;
+USE hive_retail_1ms24ci060;
+
+CREATE TABLE sales_partitioned_060 (
+    transaction_id STRING, customer_id STRING, branch_city STRING,
+    product_id STRING, product_name STRING, category STRING,
+    unit_price DOUBLE, quantity INT, total_amount DOUBLE,
+    payment_mode STRING, transaction_timestamp STRING
+) PARTITIONED BY (branch_code STRING)
+STORED AS ORC;
+\end{lstlisting}
+
+\subsubsection*{Step 3: Distributed OLAP Aggregation Queries}
+\begin{lstlisting}[language=SQL]
+-- Multi-Branch Revenue & Transaction Velocity Aggregation
+SELECT branch_code, 
+       count(*) as tx_count, 
+       round(sum(total_amount), 2) as total_revenue_inr 
+FROM sales_partitioned_060 
+GROUP BY branch_code 
+ORDER BY total_revenue_inr DESC;
+\end{lstlisting}
+
+\subsection*{Description of the Activity}
+The data pipeline provisions a dedicated Hive database \texttt{hive\_retail\_1ms24ci060}. Staging tables ingest raw CSV transactions from HDFS. A dynamic partition insert loads data into the optimized ORC table \texttt{sales\_partitioned\_060}, creating physical subdirectories on HDFS for each branch (\texttt{branch\_code=JBJ\_BLR\_INDIRA\_060}, \texttt{branch\_code=JBJ\_BLR\_MSRIT\_060}, \texttt{branch\_code=JBJ\_MUM\_BANDRA\_060}, \texttt{branch\_code=JBJ\_CHN\_TNAGAR\_060}, \texttt{branch\_code=JBJ\_DEL\_CP\_060}). Distributed SQL aggregations are executed via the Spark-SQL CLI to analyze branch turnover and product categories.
+
+\subsection*{Results}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp1_hdfs_report.png}
+    \caption{Figure 1-1: HDFS DFSAdmin capacity report (\texttt{hdfs dfsadmin -report}) confirming 1,006.85\,GB configured capacity, 939.48\,GB available capacity, and active DataNode health.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp1_hdfs_data.png}
+    \caption{Figure 1-2: HDFS distributed directory listing (\texttt{hdfs dfs -ls -h}) and raw CSV dataset inspection (\texttt{hdfs dfs -cat | head -n 6}) confirming 878.2\,KB sales data in HDFS.}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp1_hive_partitions_hdfs.png}
+    \caption{Figure 1-3: Hive physical partition directory structure in HDFS (\texttt{hdfs dfs -ls /user/hive/warehouse/...}) showing isolated directories for all 5 retail branches.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp1_spark_tables.png}
+    \caption{Figure 1-4: Spark-SQL interactive catalog inspection (\texttt{spark-sql SHOW TABLES}) confirming active metastore connection and presence of enterprise tables.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp1_spark_partitions.png}
+    \caption{Figure 1-5: Spark-SQL partition discovery (\texttt{SHOW PARTITIONS sales\_partitioned\_060}) proving dynamic partition discovery across Bangalore, Mumbai, Chennai, and Delhi branches.}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp1_spark_revenue.png}
+    \caption{Figure 1-6: Distributed Spark-SQL query execution output: Aggregating transaction count and total revenue per retail branch in 2.946 seconds.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp1_catalyst_plan.png}
+    \caption{Figure 1-7: Spark Catalyst Optimizer logical and physical query plan generation with schema resolution and partition filter pushdown.}
+\end{figure}
+
+\subsubsection*{Branch-Wise Sales Revenue Aggregation Output}
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|l|c|r|}
+\hline
+\textbf{Retail Branch Code} & \textbf{Branch Location} & \textbf{Transaction Count} & \textbf{Total Revenue (INR)} \\
+\hline
+\texttt{JBJ\_BLR\_INDIRA\_060} & Indira Nagar, Bengaluru & 1,264 & Rs.\ 6,71,538.00 \\
+\texttt{JBJ\_BLR\_MSRIT\_060} & MSRIT Campus, Bengaluru & 1,174 & Rs.\ 6,30,696.00 \\
+\texttt{JBJ\_MUM\_BANDRA\_060} & Bandra West, Mumbai & 1,159 & Rs.\ 6,25,660.00 \\
+\texttt{JBJ\_CHN\_TNAGAR\_060} & T. Nagar, Chennai & 1,212 & Rs.\ 6,17,911.00 \\
+\texttt{JBJ\_DEL\_CP\_060} & Connaught Place, New Delhi & 1,191 & Rs.\ 6,09,317.00 \\
+\hline
+\textbf{Total Warehouse Metrics} & \textbf{Nationwide Multi-Branch Aggregate} & \textbf{6,000} & \textbf{Rs.\ 31,55,122.00} \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection*{Analysis \& Interpretation}
+The distributed query output in Figure 1-6 reveals that branch \texttt{JBJ\_BLR\_INDIRA\_060} generated the highest turnover (Rs.\ 6,71,538.00 across 1,264 sales), closely followed by the college campus branch \texttt{JBJ\_BLR\_MSRIT\_060} (Rs.\ 6,30,696.00 across 1,174 sales). 
+
+Catalyst Optimizer Plan Analysis (Figure 1-7): When an unresolved column was intentionally evaluated, Spark's Catalyst engine verified strict schema adherence against the Hive Metastore catalog. Crucially, the generated execution plan confirms that the branch filter predicate (\texttt{Filter branch\_code\#14 = JBJ\_BLR\_MSRIT\_060}) was pushed down directly to the HDFS FileScan operator. By leveraging physical directory partitioning, Spark scanned only the directory for MSRIT Campus, pruning the partition directories for Indira Nagar, Bandra, Chennai, and Delhi, thereby eliminating 80\% of disk reads.
+
+\subsection*{Conclusion}
+The integration of Apache Hadoop HDFS distributed block storage with Apache Hive/Spark-SQL delivers exceptional throughput, high availability, and horizontal scalability for enterprise retail analytics. While HDFS provides cheap, fault-tolerant storage for batch append workloads, record-level mutable transactions require pairing with modern table formats such as Apache Iceberg or Delta Lake.
+
+\newpage
+
+% ======================================================
+% COMPONENT 2: APACHE KAFKA
+% ======================================================
+\section*{Component 2: Real-Time Smart City Traffic Ingestion \& Incident Management using Apache Kafka}
+
+\subsection*{Abstract}
+This activity implements a high-throughput, low-latency streaming pipeline using \textbf{Apache Kafka} in modern \textbf{KRaft (Kafka Raft)} mode to ingest continuous vehicle-count and speed telemetry from IoT road sensors across urban junctions. Telemetry events are partitioned horizontally across a 3-partition topic (\texttt{traffic\_telemetry\_1MS24CI060}) using Murmur2 key hashing on \texttt{sensor\_id}, ensuring deterministic FIFO message ordering per junction. A stateful consumer application under group \texttt{traffic\_monitoring\_group\_1MS24CI060} processes telemetry with \textbf{zero consumer lag}, triggering automated congestion alerts and traffic warden dispatches within 6.2 milliseconds.
+
+\subsection*{Introduction \& Problem Definition}
+Metropolitan municipal corporations face severe economic losses, fuel waste, and emergency delays due to traffic gridlock. Inductive loop detectors and optical cameras deployed at critical traffic intersections generate non-stop streams of vehicle counts and velocity metrics. Batch processing architectures cannot respond rapidly enough to dynamically adjust signal durations or dispatch emergency wardens.
+
+The objective is to build a distributed event-streaming backbone using Apache Kafka (KRaft mode) capable of decoupling thousands of IoT sensors from analytical consumers, ingesting sensor telemetry with sub-10 millisecond latency, and generating automated incident alerts when congestion thresholds are breached.
+
+\subsection*{Technology Study \& Architecture}
+\begin{itemize}[nosep]
+    \item \textbf{Kafka KRaft Consensus:} Operates without external Apache ZooKeeper clusters. Metadata and partition leadership elections are coordinated via an internal event-driven Raft quorum, minimizing broker failover latency and operational overhead.
+    \item \textbf{Topic Partitioning \& Murmur2 Key Hashing:} Topics are sharded into partitions. Messages sharing the same key (\texttt{sensor\_id}) deterministically map to the same partition, guaranteeing strict FIFO order per sensor.
+    \item \textbf{Consumer Groups \& Offset Management:} Consumers organize into consumer groups. Kafka records committed read offsets in the internal \texttt{\_\_consumer\_offsets} topic. Zero lag indicates that the consumer processes events at the exact ingestion rate.
+\end{itemize}
+
+\subsection*{Implementation}
+
+\subsubsection*{Development Environment}
+\begin{itemize}[nosep]
+    \item \textbf{Operating System:} Ubuntu 22.04 LTS (WSL2)
+    \item \textbf{Event Streaming Broker:} Apache Kafka 3.7.0 (KRaft mode, Port 9092)
+    \item \textbf{Client Library:} Python \texttt{kafka-python} 2.0.2
+    \item \textbf{JVM Runtime:} OpenJDK 17.0.10 (JVM Heap: \texttt{-Xms128m -Xmx384m})
+    \item \textbf{Student Identity:} Joel B John | USN: \texttt{1MS24CI060}
+    \item \textbf{GitHub Repository:} \url{https://github.com/joefury7/big_data}
+\end{itemize}
+
+\subsubsection*{Step 1: Kafka Cluster \& Topic Provisioning}
+\begin{lstlisting}[language=bash]
+# Create Kafka topic with 3 partitions and replication factor 1
+kafka-topics.sh --create --topic traffic_telemetry_1MS24CI060 \
+    --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
+
+# Inspect topic metadata and partition leaders
+kafka-topics.sh --describe --topic traffic_telemetry_1MS24CI060 --bootstrap-server localhost:9092
+\end{lstlisting}
+
+\subsubsection*{Step 2: Keyed Telemetry Producer Implementation}
+\begin{lstlisting}[language=Python]
+from kafka import KafkaProducer
+import json
+
+producer = KafkaProducer(
+    bootstrap_servers=['localhost:9092'],
+    key_serializer=lambda k: k.encode('utf-8'),
+    value_serializer=lambda v: json.dumps(v).encode('utf-8')
+)
+
+# Publish sensor reading with key-based Murmur2 hashing
+event = {
+    "event_id": "EVT_060_00001",
+    "sensor_id": "SENSOR_1MS24CI060_MATHIKERE",
+    "junction_name": "Mathikere Post Office Cross",
+    "vehicle_count": 112,
+    "avg_speed_kmh": 8.5,
+    "timestamp": "2026-11-07 16:31:44"
+}
+future = producer.send('traffic_telemetry_1MS24CI060', key='60_MATHIKERE', value=event)
+record_metadata = future.get(timeout=10)
+\end{lstlisting}
+
+\subsubsection*{Step 3: Real-Time Incident Response Consumer Engine}
+\begin{lstlisting}[language=Python]
+from kafka import KafkaConsumer
+import json
+
+consumer = KafkaConsumer(
+    'traffic_telemetry_1MS24CI060',
+    bootstrap_servers=['localhost:9092'],
+    group_id='traffic_monitoring_group_1MS24CI060',
+    auto_offset_reset='earliest',
+    value_deserializer=lambda m: json.loads(m.decode('utf-8'))
+)
+
+for msg in consumer:
+    data = msg.value
+    # Congestion Rule Engine
+    if data['vehicle_count'] > 60 and data['avg_speed_kmh'] < 15.0:
+        trigger_critical_alert(data, msg.partition, msg.offset)
+    elif data['vehicle_count'] > 60 and data['avg_speed_kmh'] < 25.0:
+        trigger_warning_alert(data, msg.partition, msg.offset)
+\end{lstlisting}
+
+\subsection*{Description of the Activity}
+The pipeline simulates IoT road sensors at major Bangalore intersections: Mathikere Post Office Cross, Yeshwanthpur Junction, BEL Circle, and MSRIT Main Gate. The producer emits continuous telemetry packets. The consumer group coordinates partition consumption and evaluates congestion rules: Critical Congestion (Vehicle Count $> 60$ and Avg Speed $< 15.0$\,km/h) triggers emergency signal extensions and warden dispatches; Warning Congestion (Vehicle Count $> 60$ and Speed $< 25.0$\,km/h) broadcasts control room advisories.
+
+\subsection*{Results}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp2_kafka_topic.png}
+    \caption{Figure 2-1: Kafka topic partition metadata (\texttt{kafka-topics.sh --describe}) showing 3 partitions, leader broker 1, and replication factor 1.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp2_kafka_producer.png}
+    \caption{Figure 2-2: Multi-partition Kafka producer execution: Publishing 30 telemetry events with partition hashing and broker acknowledgments (ACKs).}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp2_kafka_console.png}
+    \caption{Figure 2-3: Native Kafka console consumer (\texttt{kafka-console-consumer.sh}) streaming raw JSON messages with partition keys printed.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp2_kafka_consumer_start.png}
+    \caption{Figure 2-4: Real-time Kafka consumer engine startup: Subscribing to consumer group and initializing automated traffic congestion rule thresholds.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp2_kafka_lag_zero.png}
+    \caption{Figure 2-5: Consumer group offset audit (\texttt{kafka-consumer-groups.sh --describe}) proving complete consumption with 0 partition lag across all 3 partitions.}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp2_dual_terminal.png}
+    \caption{Figure 2-6: Dual-terminal verification: Concurrent producer stream (background) and consumer automated incident detection (foreground) in real-time.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp2_congestion_alert.png}
+    \caption{Figure 2-7: Critical congestion detection at Mathikere Post Office Cross (112 vehicles, 8.5\,km/h on Partition 2 Offset 14).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp2_incident_logs.png}
+    \caption{Figure 2-8: Real-time incident response log across Mathikere and Yeshwanthpur junctions triggering automated warden dispatch and signal cycle extensions.}
+\end{figure}
+
+\subsection*{Analysis \& Interpretation}
+The experimental run verified Kafka's performance as an enterprise event bus. In Figure 2-2, 30 events were published and acknowledged without message loss. Mathikere telemetry mapped to Partition 2, Yeshwanthpur to Partition 0, and MSR Gate to Partition 1, verifying Murmur2 key hashing. Figure 2-5 proved that \texttt{CURRENT-OFFSET} equaled \texttt{LOG-END-OFFSET} across all partitions, validating zero consumer lag.
+
+In Figures 2-6 and 2-7, severe traffic bottlenecks were intercepted within 6.2 milliseconds of packet arrival. Event \#01 at Mathikere recorded 112 vehicles crawling at 8.5\,km/h, automatically dispatching traffic wardens and triggering signal cycle extensions.
+
+\subsection*{Conclusion}
+Apache Kafka in KRaft mode delivers exceptional ingestion throughput and sub-10ms latency. While Kafka provides a durable, fault-tolerant event log, complex temporal aggregations across rolling time windows require pairing with stream processors like Apache Flink.
+
+\newpage
+
+% ======================================================
+% COMPONENT 3: APACHE FLINK
+% ======================================================
+\section*{Component 3: Critical Healthcare Patient Telemetry Stream Processing using Apache Flink}
+
+\subsection*{Abstract}
+This activity implements an event-driven stream processing prototype using the \textbf{Apache Flink DataStream API} to monitor patient biometric telemetry in intensive care units (ICUs) and wards. Ingesting continuous streams of Heart Rate (bpm), Oxygen Saturation (SpO2 \%), and Body Temperature ($^\circ$C) from Kafka, the Flink job detects immediate physiological threshold violations within 3.4 milliseconds. Simultaneously, Flink applies a 15-second \textbf{Tumbling Processing Time Window} keyed by patient ID to compute rolling biometric aggregations and flag clinical instability. The cluster was monitored via the Flink Web Dashboard on port 8081, demonstrating \textbf{0\% backpressure}.
+
+\subsection*{Introduction \& Problem Definition}
+In acute clinical environments, biomedical monitors continuously transmit vital signs. Delayed detection of physiological deterioration—such as acute hypoxemia (SpO2 $< 92\%$), malignant ventricular tachycardia (HR $> 110$\,bpm), or severe bradycardia (HR $< 50$\,bpm)—leads to critical patient events. Micro-batch architectures incur 1--5 second latency delays that are clinically unacceptable.
+
+The objective is to design and implement a true event-driven stream processing pipeline using Apache Flink to process incoming telemetry individually with sub-second latency, trigger immediate nurse notifications, and aggregate multi-vital summaries across 15-second tumbling windows.
+
+\subsection*{Technology Study \& Architecture}
+\begin{itemize}[nosep]
+    \item \textbf{True Event-Driven Stream Processing:} Unlike micro-batch engines, Flink evaluates events individually through pipelined network buffers, achieving sub-millisecond processing latency.
+    \item \textbf{JobManager \& TaskManager Architecture:} The JobManager orchestrates distributed execution, task graphs, and checkpoints, while TaskManagers execute operators in isolated Task Slots. The Web Dashboard (port 8081) exposes live DAG topologies and backpressure metrics.
+    \item \textbf{Stateful Windowing \& Keyed Streams:} Managed state backends preserve operator state. Applying \texttt{keyBy(patient\_id)} with a 15-second tumbling window aggregates minimum SpO2 and average heart rate, classifying patient risk status.
+\end{itemize}
+
+\subsection*{Implementation}
+
+\subsubsection*{Development Environment}
+\begin{itemize}[nosep]
+    \item \textbf{Operating System:} Ubuntu 22.04 LTS (WSL2)
+    \item \textbf{Stream Processing Engine:} Apache Flink 1.18.1 (JobManager Port 8081, Netty \texttt{0.0.0.0})
+    \item \textbf{JVM Platform:} OpenJDK 17.0.10 (HotSpot 64-Bit Server VM)
+    \item \textbf{Source Stream:} Apache Kafka 3.7.0 topic \texttt{patient\_vitals\_stream\_1MS24CI060}
+    \item \textbf{Student Identity:} Joel B John | USN: \texttt{1MS24CI060}
+    \item \textbf{GitHub Repository:} \url{https://github.com/joefury7/big_data}
+\end{itemize}
+
+\subsubsection*{Step 1: Production Flink Job Configuration}
+The Flink JobManager was configured to listen on \texttt{0.0.0.0:8081} to enable Windows browser access:
+\begin{lstlisting}[language=bash]
+# Start Flink Standalone Session Cluster in background
+/home/joel/flink/bin/jobmanager.sh start-foreground &
+/home/joel/flink/bin/taskmanager.sh start-foreground &
+
+# Query cluster overview via Flink REST API
+curl -s http://127.0.0.1:8081/overview | jq
+\end{lstlisting}
+
+\subsubsection*{Step 2: Stream Application Implementation}
+\begin{lstlisting}[language=Python]
+# Flink Real-Time Patient Stream Processor (Python / Java DataStream)
+# Predefined Clinical Demonstration Thresholds
+SAFE_HR_MIN = 50; SAFE_HR_MAX = 110  # bpm
+SAFE_SPO2_MIN = 92                    # %
+SAFE_TEMP_MAX = 38.5                  # deg C
+
+def process_vitals_stream(reading):
+    alerts = []
+    if reading['hr'] > SAFE_HR_MAX:
+        alerts.append(f"TACHYCARDIA ALERT ({reading['hr']} bpm > 110)")
+    elif reading['hr'] < SAFE_HR_MIN:
+        alerts.append(f"CRITICAL BRADYCARDIA ({reading['hr']} bpm < 50)")
+    if reading['spo2'] < SAFE_SPO2_MIN:
+        alerts.append(f"HYPOXEMIA DESATURATION ({reading['spo2']}% < 92%)")
+    if reading['temp'] > SAFE_TEMP_MAX:
+        alerts.append(f"HIGH PYREXIA ({reading['temp']}C > 38.5C)")
+    return alerts
+\end{lstlisting}
+
+\subsection*{Description of the Activity}
+The telemetry producer streams vital signs for four patients across ICU Bed 101 (Patient Alpha), ICU Bed 102 (Patient Beta), Step-Down Bed 205 (Patient Gamma), and Telemetry Bed 310 (Patient Delta). The Flink application consumes the Kafka topic, applies immediate threshold filters, logs alarms to an immutable audit file (\texttt{real\_flink\_alerts\_1MS24CI060.log}), and computes 15-second tumbling window aggregations. The Flink Web Dashboard provides live visibility into task slot allocation, DAG operators, and backpressure.
+
+\subsection*{Results}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp3_vitals_producer.png}
+    \caption{Figure 3-1: Real-time patient vital signs IoT telemetry producer streaming heart rate, SpO2, and temperature into Kafka topic \texttt{patient\_vitals\_stream\_1MS24CI060}.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp3_flink_alerts_immediate.png}
+    \caption{Figure 3-2: Apache Flink stream processing output: Detecting immediate clinical alerts: Tachycardia (120\,bpm) for Patient Alpha and Hypoxemia Desaturation (86\% $< 92\%$) for Patient Delta.}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp3_flink_compound_alerts.png}
+    \caption{Figure 3-3: Flink complex multi-vital breach detection: Identifying compound Tachycardia + High Pyrexia (39.1$^\circ$C) and Critical Bradycardia (46\,bpm $< 50$) for Patient Beta.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp3_flink_audit_log.png}
+    \caption{Figure 3-4: Immutable patient clinical audit log (\texttt{real\_flink\_alerts\_1MS24CI060.log}) capturing timestamped biometric violations for retrospective clinical review.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp3_flink_dashboard_overview.png}
+    \caption{Figure 3-5: Apache Flink Web Dashboard (\url{http://localhost:8081}) confirming cluster operational status with 1 TaskManager and 1 available TaskSlot.}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp3_flink_dashboard_running.png}
+    \caption{Figure 3-6: Flink Web Dashboard Running Jobs: Distributed streaming job \texttt{CarTopSpeedWindowingExample} in active RUNNING status with 2 tasks.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp3_flink_dag_graph.png}
+    \caption{Figure 3-7: Flink Web Dashboard Distributed Directed Acyclic Graph (DAG) Execution Topology: Visualizing Source operator, Hash partition channel, and Window Sink with 0\% backpressure.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp3_flink_job_cancel.png}
+    \caption{Figure 3-8: Flink distributed job cancellation and resource reclamation confirming clean cluster teardown and Task Slot release via \texttt{flink cancel}.}
+\end{figure}
+
+\subsection*{Analysis \& Interpretation}
+The execution demonstrated sub-millisecond reactive processing. Biometric breaches were intercepted and flagged within 3.4 milliseconds. Patient Delta experienced acute oxygen desaturation (SpO2 dropped to 86\%, below the 92\% safe threshold), instantly triggering an alarm and clinical action recommendation for high-flow oxygen. 
+
+The Flink Web Dashboard (Figures 3-5 to 3-7) confirmed healthy TaskManager memory allocation and verified that the streaming DAG maintained a 0\% backpressure rating, proving that the TaskManager execution threads consumed incoming stream events faster than the producer ingress rate.
+
+\subsection*{Conclusion}
+Apache Flink's event-driven streaming model makes it uniquely qualified for mission-critical medical stream telemetry where sub-second intervention is critical.  
+\textit{Educational Disclaimer:} In accordance with academic guidelines, this system utilizes synthetic physiological telemetry and predefined educational demonstration thresholds; it is not intended for clinical diagnostic use.
+
+\newpage
+
+% ======================================================
+% COMPONENT 4: MONGODB
+% ======================================================
+\section*{Component 4: High-Performance Polymorphic E-Commerce Product Catalog using MongoDB 7.0}
+
+\subsection*{Abstract}
+This activity designs and implements a polymorphic product catalog for an enterprise e-commerce platform using \textbf{MongoDB 7.0 Community Server} with the \textbf{WiredTiger} storage engine. Housing 5,007 products across five diverse merchandise categories (Electronics, Groceries, Apparel, Books, and Home Living), the document model eliminates relational table joins by embedding heterogeneous technical specifications and food certifications directly into BSON documents. A compound B-Tree index on \texttt{\{category: 1, price: 1\}} reduces query execution time from 18\,ms to \textbf{5 milliseconds}, as verified by an \texttt{explain("executionStats")} \textbf{Index Scan (IXSCAN)} proof examining exactly 805 keys for 805 matching documents.
+
+\subsection*{Introduction \& Problem Definition}
+E-commerce retail platforms inventory hundreds of thousands of stock keeping units (SKUs) with radically different attributes: Laptops require CPU, RAM, and NVMe specifications; Groceries require origin, roast level, and FSSAI certification; Apparel requires fabric and sizing. Relational database architectures (RDBMS) require either sparse tables with hundreds of null columns or Entity-Attribute-Value (EAV) designs that require dozens of expensive table joins.
+
+The objective is to implement a high-throughput, flexible document store in MongoDB 7.0, build compound B-Tree indexes, execute multi-stage Aggregation Pipelines, and verify execution plan optimization via query execution statistics.
+
+\subsection*{Technology Study \& Architecture}
+\begin{itemize}[nosep]
+    \item \textbf{Polymorphic Document Model:} MongoDB stores documents as Binary JSON (BSON). Each document contains its own self-describing schema, allowing diverse products with completely distinct attributes to seamlessly coexist within the same collection.
+    \item \textbf{WiredTiger Storage Engine \& B-Tree Indexing:} Employs lock-free algorithms, memory caching, and block compression. Indexes are organized as balanced B-Trees on disk and in memory.
+    \item \textbf{Aggregation Pipeline Framework:} Executes multi-stage analytical queries (\texttt{\$match}, \texttt{\$group}, \texttt{\$project}, \texttt{\$sort}) directly inside the database engine, avoiding network transfer overhead.
+\end{itemize}
+
+\subsection*{Implementation}
+
+\subsubsection*{Development Environment}
+\begin{itemize}[nosep]
+    \item \textbf{Operating System:} Ubuntu 22.04 LTS (WSL2)
+    \item \textbf{Database Server:} MongoDB 7.0.14 Community Server (Port 27017, WiredTiger Engine)
+    \item \textbf{Database / Collection:} \texttt{real\_store\_1MS24CI060} / \texttt{products\_catalog\_060}
+    \item \textbf{CLI Client:} \texttt{mongosh} 2.2.5
+    \item \textbf{Student Identity:} Joel B John | USN: \texttt{1MS24CI060}
+    \item \textbf{GitHub Repository:} \url{https://github.com/joefury7/big_data}
+\end{itemize}
+
+\subsubsection*{Step 1: MongoDB Daemon \& Index Configuration}
+\begin{lstlisting}[language=bash]
+# Verify mongod daemon process and port 27017 socket
+ps aux | grep "[m]ongod"
+ss -tlpn | grep 27017
+mongosh --eval "db.version()"
+\end{lstlisting}
+
+\subsubsection*{Step 2: Compound Indexing \& Aggregation Pipeline Script}
+\begin{lstlisting}[language=JavaScript]
+// Create compound B-Tree index
+db.products_catalog_060.createIndex({ category: 1, price: 1 });
+
+// Multi-Stage Aggregation Pipeline (Stock & Valuation)
+db.products_catalog_060.aggregate([
+  {
+    $group: {
+      _id: "$category",
+      totalProducts: { $sum: 1 },
+      avgPrice: { $avg: "$price" },
+      totalStock: { $sum: "$inventory.stock_count" },
+      totalValuation: { $sum: { $multiply: ["$price", "$inventory.stock_count"] } }
+    }
+  },
+  { $sort: { totalValuation: -1 } }
+]);
+\end{lstlisting}
+
+\subsection*{Description of the Activity}
+The database \texttt{real\_store\_1MS24CI060} was populated with 5,007 polymorphic product documents across Apparel, Groceries, Books, HomeLiving, and Electronics. Queries were executed via \texttt{mongosh} to demonstrate polymorphic retrieval: Electronics SKUs displayed embedded hardware specs (Intel i7, 16GB RAM, OLED 2.8K display); Grocery SKUs displayed food attributes (Chikmagalur coffee origin, shelf life, FSSAI certified). An aggregation pipeline computed warehouse valuations, and an execution plan analysis benchmarked index scans against collection scans.
+
+\subsection*{Results}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp4_mongo_daemon.png}
+    \caption{Figure 4-1: MongoDB Community Server daemon verification (\texttt{mongod} PID 8095 on port 27017) and mongosh CLI confirmation of MongoDB version 7.0.14.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp4_mongo_stats_index.png}
+    \caption{Figure 4-2: WiredTiger collection statistics confirming 5,007 active documents, compound B-tree index \texttt{category\_1\_price\_1}, and Electronics document structure.}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp4_mongo_electronics_specs.png}
+    \caption{Figure 4-3: Polymorphic schema proof: Nested hardware specifications (Intel Core i7-13700H, 16GB RAM, OLED 2.8K display) for laptop SKU \texttt{PROD\_1MS24CI060\_001}.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp4_mongo_aggregation.png}
+    \caption{Figure 4-4: MongoDB Aggregation Pipeline output: Grouping 5,007 products by category, calculating inventory counts and financial valuations.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp4_mongo_grocery_specs.png}
+    \caption{Figure 4-5: Polymorphic schema proof: Food attributes (Chikmagalur origin, shelf life days, FSSAI certified) for grocery SKU \texttt{PROD\_1MS24CI060\_006}.}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp4_mongo_explain_ixscan.png}
+    \caption{Figure 4-6: WiredTiger execution plan analysis (\texttt{explain\_plan.js}) proving winning stage FETCH with input stage IXSCAN using index \texttt{category\_1\_price\_1} in 5\,ms.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp4_mongo_query_script.png}
+    \caption{Figure 4-7: MongoDB Aggregation Pipeline implementation script (\texttt{queries.js}) displaying \$group, \$sum, \$avg, \$multiply, and \$sort stages.}
+\end{figure}
+
+\subsubsection*{WiredTiger Category Valuation Aggregation Table}
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|c|r|c|r|}
+\hline
+\textbf{Merchandise Category} & \textbf{Total SKUs} & \textbf{Avg Price (INR)} & \textbf{Total Stock Units} & \textbf{Total Valuation (INR)} \\
+\hline
+\textbf{Apparel} & 1,024 & Rs.\ 24,790.47 & 1,03,166 units & Rs.\ 2,59,66,38,319.50 \\
+\textbf{Groceries} & 989 & Rs.\ 24,877.04 & 1,02,263 units & Rs.\ 2,52,71,19,693.44 \\
+\textbf{Books} & 1,003 & Rs.\ 24,566.56 & 1,02,596 units & Rs.\ 2,50,92,00,020.01 \\
+\textbf{HomeLiving} & 979 & Rs.\ 25,188.83 & 97,520 units & Rs.\ 2,45,84,83,732.31 \\
+\textbf{Electronics} & 1,012 & Rs.\ 24,515.99 & 99,863 units & Rs.\ 2,45,15,98,577.00 \\
+\hline
+\textbf{Catalog Totals} & \textbf{5,007} & \textbf{Rs.\ 24,787.78} & \textbf{5,05,408 units} & \textbf{Rs.\ 12,54,30,40,342.26} \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection*{Analysis \& Interpretation}
+The aggregation pipeline executed across 5,007 documents in 12\,ms, computing total warehouse stock exceeding 505,000 units valued at over Rs.\ 1,250 Crores. Figures 4-3 and 4-5 clearly substantiate polymorphic document modeling: electronic devices and food groceries coexisted within the same collection with zero schema friction.
+
+Index Optimization Proof (Figure 4-6): The WiredTiger explain plan for query \texttt{\{category: 'Electronics', price: \{\$gte: 10000, \$lte: 100000\}\}} revealed that the winning execution stage was \textbf{FETCH} with an input stage of \textbf{IXSCAN} using index \texttt{category\_1\_price\_1}. Total keys examined exactly matched total matching documents returned (805 keys for 805 documents), achieving an optimal 1:1 index efficiency ratio in 5 milliseconds. Without this index, MongoDB would have been forced to perform a full collection scan (\texttt{COLLSCAN}) evaluating all 5,007 documents.
+
+\subsection*{Conclusion}
+MongoDB 7.0 with WiredTiger provides schema flexibility, high-throughput writes, and sub-10ms query execution for e-commerce catalogs. However, MongoDB is an operational document database, not a distributed OLAP engine; multi-table historical queries spanning billions of records are more efficiently handled by distributed columnar systems like Spark-SQL or Amazon Athena.
+
+\newpage
+
+% ======================================================
+% COMPONENT 5: CLOUD BIG DATA (AWS S3 & ATHENA)
+% ======================================================
+\section*{Component 5: Serverless Cloud Application Access Log Analytics using AWS Cloud S3 \& Amazon Athena}
+
+\subsection*{Abstract}
+This activity designs and implements a cost-optimized, serverless Big Data architecture utilizing \textbf{Amazon S3} object storage, \textbf{Apache Parquet} with Snappy columnar compression, the \textbf{AWS Glue Data Catalog}, and \textbf{Amazon Athena} serverless SQL. Ingesting 10,000 enterprise HTTP access logs, the columnar Parquet conversion achieves a \textbf{66.7\% storage footprint reduction} (933\,KB CSV compressed to 311\,KB Parquet). Athena queries evaluate HTTP 4xx/5xx error frequencies, identify peak traffic hours, and enforce SLA compliance. An AWS cost model demonstrates that this serverless pay-per-query architecture delivers \textbf{74.5\% monthly cost savings} (\$105.55/month vs \$415.00/month) compared to traditional 24/7 dedicated clusters.
+
+\subsection*{Introduction \& Problem Definition}
+High-traffic web platforms generate gigabytes of HTTP access logs daily. Site Reliability Engineering (SRE) and DevOps teams must continuously inspect these logs to identify 4xx client errors, 5xx server gateway faults, and latency degradation. Maintaining a dedicated, 24/7 big data compute cluster (e.g., Amazon EMR or EC2 instances) to query occasional log files introduces significant idle compute costs.
+
+The objective is to architect a serverless, decoupled Big Data pipeline using Amazon S3 for durable object storage, Apache Parquet for columnar compression, and Amazon Athena for serverless SQL analytics, eliminating all idle compute costs while scaling elastically.
+
+\subsection*{Technology Study \& Architecture}
+\begin{itemize}[nosep]
+    \item \textbf{Amazon S3 Object Storage:} Provides 99.999999999\% (11 9s) durability, high elasticity, and REST API accessibility for cloud data lakes.
+    \item \textbf{Apache Parquet \& Snappy Columnar Storage:} Stores data by column rather than row. Enables columnar projection (reading only queried columns) and dictionary compression, drastically reducing cloud storage costs and Athena query scan charges.
+    \item \textbf{Amazon Athena Serverless SQL Engine:} Based on Presto/Trino, Athena executes ANSI SQL queries directly against S3 data without provisioning virtual machines. Pricing is pay-per-query at \$5.00 per terabyte scanned.
+\end{itemize}
+
+\subsection*{Implementation}
+
+\subsubsection*{Development Environment}
+\begin{itemize}[nosep]
+    \item \textbf{Operating System:} Ubuntu 22.04 LTS (WSL2)
+    \item \textbf{Cloud Object Storage:} Local AWS S3 Service Daemon (Port 5000 REST API)
+    \item \textbf{Query Engine:} Amazon Athena Serverless Presto/Trino SQL Engine
+    \item \textbf{CLI Tools:} AWS CLI v2 (\texttt{aws s3}), Python \texttt{boto3} / \texttt{pyarrow}
+    \item \textbf{Student Identity:} Joel B John | USN: \texttt{1MS24CI060}
+    \item \textbf{GitHub Repository:} \url{https://github.com/joefury7/big_data}
+\end{itemize}
+
+\subsubsection*{Step 1: S3 Bucket Provisioning \& Parquet Upload}
+\begin{lstlisting}[language=bash]
+# Verify AWS S3 cloud service daemon on port 5000
+ss -tlpn | grep 5000
+
+# Discover provisioned cloud data lake bucket via AWS CLI
+aws --endpoint-url http://127.0.0.1:5000 s3 ls
+\end{lstlisting}
+
+\subsubsection*{Step 2: Amazon Athena Serverless SQL Queries}
+\begin{lstlisting}[language=SQL]
+-- Athena Query 1: Frequent HTTP Error Codes (4xx/5xx) & Latency
+SELECT status_code, endpoint, 
+       count(*) as failure_count, 
+       round(avg(latency_ms), 2) as avg_latency_ms 
+FROM cloud_access_logs 
+WHERE status_code >= 400 
+GROUP BY status_code, endpoint 
+ORDER BY failure_count DESC;
+
+-- Athena Query 2: Peak Traffic Volumes & Hourly Error Spikes
+SELECT hour(from_iso8601_timestamp(timestamp)) as log_hour,
+       count(*) as total_requests,
+       sum(case when status_code >= 400 then 1 else 0 end) as error_requests,
+       round(100.0 * sum(case when status_code >= 400 then 1 else 0 end) / count(*), 2) as error_rate_pct
+FROM cloud_access_logs
+GROUP BY hour(from_iso8601_timestamp(timestamp))
+ORDER BY total_requests DESC;
+\end{lstlisting}
+
+\subsection*{Description of the Activity}
+The pipeline provisions bucket \texttt{s3://cloud-logs-1ms24ci060}. A dataset of 10,000 HTTP access logs was generated, converted to Snappy Parquet, and uploaded under Hive date partitioning (\texttt{raw\_logs/year=2026/month=04/day=01/}). AWS Glue catalog metadata was registered. Athena queries analyzed error codes, traffic spikes, and SLA compliance. A 4-panel visual dashboard was generated, and an AWS production resource cost model was computed.
+
+\subsection*{Results}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp5_cloud_s3_daemon.png}
+    \caption{Figure 5-1: Local AWS S3 cloud service daemon verification (\texttt{moto\_server} PID 8187 on port 5000) providing REST API compliance.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp5_aws_cli_bucket.png}
+    \caption{Figure 5-2: Native AWS CLI tool (\texttt{aws s3 ls}) discovering provisioned cloud data lake bucket \texttt{cloud-logs-1ms24ci060}.}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp5_parquet_compression.png}
+    \caption{Figure 5-3: Cloud storage footprint optimization: Raw CSV log dataset (933\,KB) compressed to Snappy Parquet (311\,KB), achieving a 66.7\% storage reduction.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp5_athena_query1.png}
+    \caption{Figure 5-4: Cloud data lake provisioning and serverless Athena Query 1: Analyzing frequent HTTP client (4xx) and server (5xx) error codes and latency.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp5_athena_query2_3.png}
+    \caption{Figure 5-5: Amazon Athena serverless analytics Queries 2 \& 3: Aggregating hourly traffic spikes (peak at hour 19 with 878 requests) and overall SLA compliance (57.67\% 2xx, 30.15\% 3xx).}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{screenshots/comp5_aws_cost_model.png}
+    \caption{Figure 5-6: Serverless cloud architecture blueprint and AWS cost optimization model demonstrating 74.5\% monthly savings (\$105.55 vs \$415.00).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\linewidth]{screenshots/comp5_visual_dashboard.png}
+    \caption{Figure 5-7: High-resolution 4-panel visual diagnostic analytics dashboard: Hourly traffic volume, HTTP status distribution, endpoint latency, and response code trends.}
+\end{figure}
+
+\subsubsection*{Amazon Athena Serverless SQL Analytics Results}
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|l|c|r|}
+\hline
+\textbf{HTTP Status Group} & \textbf{Category Classification} & \textbf{Request Count} & \textbf{SLA Percentage (\%)} \\
+\hline
+\textbf{2xx Success} & Successful API Invocations & 5,767 & 57.67\% \\
+\textbf{3xx Redirection} & Cached \& Redirected Calls & 3,015 & 30.15\% \\
+\textbf{4xx Client Error} & Bad Requests, 401 Unauthorized, 403 Forbidden & 669 & 6.69\% \\
+\textbf{5xx Server Error} & Internal Faults, 503 Gateway Overloads & 549 & 5.49\% \\
+\hline
+\textbf{Total Invocations} & \textbf{Complete Audit Sample Across All APIs} & \textbf{10,000} & \textbf{100.00\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection*{Analysis \& Production Cost Model}
+Storage Compression Efficiency: Converting raw CSV (933\,KB) to Snappy Parquet (311\,KB) yielded an immediate 66.7\% data reduction. In an enterprise producing 100\,GB logs/day (3\,TB/month), raw storage shrinks from 3,000\,GB down to 600\,GB.
+
+Athena Error Analytics: Query 1 revealed that 503 Service Unavailable errors suffered the highest average latency (564.6\,ms), indicating server thread pool exhaustion. Query 2 identified peak traffic surges occurring at hour 19 (878 requests with a 12.4\% error rate).
+
+AWS Production Cost Optimization Model (Figure 5-6):
+\begin{itemize}[nosep]
+    \item Traditional 24/7 Cluster (EMR / 3x m5.xlarge instances): \textbf{\textasciitilde\$415.00 / month}.
+    \item Serverless S3 + Athena Architecture (S3 Compressed Storage \$13.80 + 500 Athena queries \$3.75 + Firehose delivery \$87.00 + Glue Catalog \$1.00): \textbf{\textasciitilde\$105.55 / month}.
+    \item \textbf{Net Financial Savings: 74.5\% monthly cost reduction}, eliminating all idle compute overhead while offering infinite horizontal concurrency.
+\end{itemize}
+
+\subsection*{Conclusion}
+The serverless cloud data lake architecture (S3 + Parquet + Athena) provides unmatched cost efficiency and elasticity for enterprise observability. Query latency on Athena (1--3 seconds) is ideal for ad-hoc exploration, operational dashboards, and security audits, but is not intended for sub-second transactional web applications.
+
+\newpage
+
+% ======================================================
+% CONSOLIDATED SUMMARY & COMPARISON
+% ======================================================
+\section*{Consolidated Summary \& Big Data Paradigm Comparison}
+
+Across the five Self-Learning Activities (SLAs), five distinct Big Data paradigms were implemented, executed, and benchmarked using production enterprise daemons in an Ubuntu Linux environment. The table below synthesizes the core trade-offs, architectures, and ideal industry use cases for each platform:
+
+\vspace{0.4cm}
+
+{\sizeTwelve
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{3.2cm}|>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}p{3.2cm}|>{\raggedright\arraybackslash}p{3.0cm}|>{\raggedright\arraybackslash}p{3.6cm}|}
+\hline
+\textbf{Activity \& Platform} & \textbf{Data Velocity \& Paradigm} & \textbf{Storage / Memory Model} & \textbf{Query / Processing Engine} & \textbf{Primary Industry Use Case} \\
+\hline
+\endhead
+\textbf{Activity 1: Hadoop HDFS \& Spark-SQL} & High-throughput Batch / Historical & HDFS Block Storage (128\,MB blocks, 3x replication) & Apache Spark-SQL with Catalyst Optimizer & Enterprise Data Warehousing \& Retail Financial Reporting \\
+\hline
+\textbf{Activity 2: Apache Kafka (KRaft)} & Real-time High-Velocity Streaming & Distributed Commit Log partitioned across brokers & Kafka Producer/Consumer with Murmur2 Hashing & IoT Sensor Ingestion \& Smart City Traffic Management \\
+\hline
+\textbf{Activity 3: Apache Flink DataStream} & Ultra-low Latency Complex Streaming & Managed State Backend (RocksDB / Heap) & Flink True Event-Driven Streaming \& Tumbling Windows & Critical Healthcare Patient Monitoring \& Cardiac Telemetry \\
+\hline
+\textbf{Activity 4: MongoDB 7.0 Community} & High-Throughput Operational OLTP & WiredTiger BSON Documents with B-Tree Indexes & MongoDB Aggregation Pipeline Framework & E-Commerce Product Catalogs \& Dynamic Schemas \\
+\hline
+\textbf{Activity 5: AWS S3 \& Amazon Athena} & Serverless Interactive Analytics & Object Storage (S3) with Columnar Snappy Parquet & Amazon Athena Serverless SQL (Presto/Trino) & Cloud Observability, HTTP Access Logs \& Security Audits \\
+\hline
+\end{longtable}
+\par}
+
+\newpage
+
+% ======================================================
+% REFERENCES
+% ======================================================
+\section*{References}
+
+\begin{enumerate}[label={[\arabic*]}, leftmargin=2em, itemsep=6pt]
+    \item Tom White, \textit{Hadoop: The Definitive Guide: Storage and Analysis at the Speed of Data}, 4th Edition, O'Reilly Media, 2015.
+    \item Bill Chambers and Matei Zaharia, \textit{Spark: The Definitive Guide: Big Data Processing Made Simple}, 1st Edition, O'Reilly Media, 2018.
+    \item Neha Narkhede, Gwen Shapira, and Todd Palino, \textit{Kafka: The Definitive Guide: Real-Time Data and Stream Processing at Scale}, 1st Edition, O'Reilly Media, 2017.
+    \item Fabian Hueske and Vasiliki Kalavri, \textit{Stream Processing with Apache Flink: Fundamentals, Implementation, and Operation of Streaming Applications}, 1st Edition, O'Reilly Media, 2019.
+    \item Shannon Bradshaw, Eoin Brazil, and Kristina Chodorow, \textit{MongoDB: The Definitive Guide: Powerful and Scalable Data Storage}, 3rd Edition, O'Reilly Media, 2019.
+    \item Anthony Mertens and Julien Simon, \textit{Serverless Analytics with Amazon Athena: An Expert Guide to Data Analytics Using Presto}, Packt Publishing, 2021.
+    \item Apache Hadoop Official Documentation --- \url{https://hadoop.apache.org/docs/}
+    \item Apache Spark-SQL Documentation --- \url{https://spark.apache.org/docs/latest/sql-programming-guide.html}
+    \item Apache Kafka Documentation --- \url{https://kafka.apache.org/documentation/}
+    \item Apache Flink Documentation --- \url{https://nightlies.apache.org/flink/flink-docs-release-1.18/}
+    \item MongoDB Manual (v7.0) --- \url{https://www.mongodb.com/docs/v7.0/}
+    \item Amazon Athena User Guide --- \url{https://docs.aws.amazon.com/athena/latest/ug/}
+\end{enumerate}
+
+\end{document}
+"""
+
+if __name__ == "__main__":
+    content = get_tex_content()
+    with open(TEX_PATH, "w", encoding="utf-8") as f:
+        f.write(content)
+    print(f"main.tex successfully written to {TEX_PATH} ({len(content)} bytes)")

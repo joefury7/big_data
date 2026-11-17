@@ -28,3 +28,14 @@ desktop.ini
 
 # Background task logs & ephemeral system logs
 *.tmp
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
