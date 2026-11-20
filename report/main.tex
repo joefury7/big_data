@@ -342,7 +342,7 @@ Table \ref{tab:activities_overview} outlines the five activities investigated in
 \centering
 \caption{Overview of Big Data Systems Activities}
 \label{tab:activities_overview}
-\begin{tabularx}{\textwidth}{|c|l|X|c|}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.8cm}|>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{1.2cm}|}
 \hline
 \textbf{No.} & \textbf{Technology} & \textbf{Application Scenario} & \textbf{Marks}\\
 \hline
@@ -373,9 +373,10 @@ To replicate an authentic distributed computing environment, all supporting runt
 
 \begin{table}[H]
 \centering
+\small
 \caption{Software Requirements}
 \label{tab:software_reqs}
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.2cm}|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Component} & \textbf{Technology / Requirement}\\
 \hline
@@ -405,9 +406,10 @@ The host workstation specifications and resource allocation thresholds configure
 
 \begin{table}[H]
 \centering
+\small
 \caption{Hardware Requirements}
 \label{tab:hardware_reqs}
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.2cm}|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Component} & \textbf{Minimum / Available Specification}\\
 \hline
@@ -452,9 +454,10 @@ Table \ref{tab:datasets_reqs} summarizes the datasets utilized across all five a
 
 \begin{table}[H]
 \centering
+\small
 \caption{Datasets Required for the Activities}
 \label{tab:datasets_reqs}
-\begin{tabularx}{\textwidth}{|l|X|X|}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.5cm}|>{\raggedright\arraybackslash}p{6.5cm}|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Activity} & \textbf{Dataset / Data Fields} & \textbf{Purpose}\\
 \hline
@@ -485,21 +488,22 @@ Table \ref{tab:master_architecture} illustrates the multi-daemon system architec
 
 \begin{table}[H]
 \centering
+\small
 \caption{Master Big Data Daemon Architecture and Network Topology}
 \label{tab:master_architecture}
-\begin{tabularx}{\textwidth}{|l|l|l|X|}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{1.8cm}|>{\raggedright\arraybackslash}p{3.8cm}|>{\centering\arraybackslash}p{1.6cm}|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Activity} & \textbf{Core Engine} & \textbf{Port} & \textbf{Storage / Service Path}\\
 \hline
-Activity 1 & Hadoop HDFS \& Spark-SQL & 9000, 9870 & \texttt{hdfs://localhost:9000/user/hive/warehouse/}\\
+Activity 1 & Hadoop HDFS \& Spark-SQL & 9000, 9870 & \url{hdfs://localhost:9000/user/hive/warehouse/}\\
 \hline
-Activity 2 & Apache Kafka (KRaft Mode) & 9092 & \texttt{/home/joel/kafka/data/traffic\_telemetry\_1MS24CI060}\\
+Activity 2 & Apache Kafka (KRaft) & 9092 & \url{/home/joel/kafka/data/traffic_telemetry_1MS24CI060}\\
 \hline
-Activity 3 & Apache Flink Cluster & 8081 & Local JVM Heap \& Standalone Session State\\
+Activity 3 & Apache Flink Cluster & 8081 & JVM Heap \& Standalone Session State\\
 \hline
-Activity 4 & MongoDB 7.0 (WiredTiger) & 27017 & \texttt{/home/joel/mongodb/data/} (Database: \texttt{real\_store\_1MS24CI060})\\
+Activity 4 & MongoDB 7.0 WiredTiger & 27017 & \url{/home/joel/mongodb/data/}\newline (Database: \texttt{real\_store\_1MS24CI060})\\
 \hline
-Activity 5 & AWS Cloud S3 \& Athena & 5000 & \texttt{s3://cloud-logs-1ms24ci060/} (Parquet Data Lake)\\
+Activity 5 & AWS S3 \& Athena & 5000 & \url{s3://cloud-logs-1ms24ci060/}\newline (Columnar Parquet Data Lake)\\
 \hline
 \end{tabularx}
 \end{table}
@@ -714,9 +718,10 @@ Table \ref{tab:hive_results} details the analytical queries executed against the
 
 \begin{table}[H]
 \centering
+\small
 \caption{Hive Sales Analysis Results}
 \label{tab:hive_results}
-\begin{tabularx}{\textwidth}{|l|X|X|}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}p{5.8cm}|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Analysis} & \textbf{Query / Metric} & \textbf{Observation}\\
 \hline
@@ -796,9 +801,10 @@ Table \ref{tab:traffic_results} summarizes the traffic monitoring status detecte
 
 \begin{table}[H]
 \centering
+\small
 \caption{Sample Traffic Monitoring Results}
 \label{tab:traffic_results}
-\begin{tabularx}{\textwidth}{|l|c|c|X|}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.5cm}|>{\centering\arraybackslash}p{2.2cm}|>{\centering\arraybackslash}p{2.2cm}|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Junction} & \textbf{Vehicle Count} & \textbf{Speed (km/h)} & \textbf{Detected Status}\\
 \hline
@@ -876,9 +882,10 @@ Table \ref{tab:flink_results} presents sample telemetry events and the correspon
 
 \begin{table}[H]
 \centering
+\small
 \caption{Sample Patient Stream-Processing Results}
 \label{tab:flink_results}
-\begin{tabularx}{\textwidth}{|l|l|c|c|c|X|}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.8cm}|>{\centering\arraybackslash}p{1.8cm}|>{\centering\arraybackslash}p{1.8cm}|>{\centering\arraybackslash}p{1.3cm}|>{\centering\arraybackslash}p{1.6cm}|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Device / Bed} & \textbf{Timestamp} & \textbf{Heart Rate} & \textbf{SpO$_2$} & \textbf{Temp ($^\circ$C)} & \textbf{Status}\\
 \hline
@@ -966,9 +973,10 @@ To evaluate the WiredTiger storage engine, an explain plan benchmark was execute
 
 \begin{table}[H]
 \centering
+\small
 \caption{Comparison of MongoDB Document Model and Relational Database}
 \label{tab:mongo_rdbms_comparison}
-\begin{tabularx}{\textwidth}{|l|X|X|}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.2cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Aspect} & \textbf{MongoDB Document Database} & \textbf{Relational Database (RDBMS)}\\
 \hline
@@ -1011,9 +1019,10 @@ An enterprise online service provider generates gigabytes of application server 
 
 \begin{table}[H]
 \centering
+\small
 \caption{Selected Cloud Services}
 \label{tab:cloud_services}
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.2cm}|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Item} & \textbf{Details}\\
 \hline
@@ -1067,21 +1076,22 @@ Table \ref{tab:summary_outcomes} provides a consolidated comparison of all five 
 
 \begin{table}[H]
 \centering
+\small
 \caption{Summary of Technology Implementation Outcomes}
 \label{tab:summary_outcomes}
-\begin{tabularx}{\textwidth}{|l|l|l|X|}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.3cm}|>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Technology} & \textbf{Paradigm} & \textbf{Storage Format} & \textbf{Key Measured Benchmark}\\
 \hline
-Apache Hive & Distributed Batch OLAP & Snappy ORC in HDFS & Partition pruning eliminated 80\% of scanned directories; INR 6.62 Cr revenue aggregated.\\
+Apache Hive & Batch OLAP & Snappy ORC (HDFS) & Partition pruning eliminated 80\% of scanned directories; INR 6.62 Cr revenue aggregated.\\
 \hline
-Apache Kafka & Event Streaming Ingestion & Distributed Log Segments & Ingestion across 3 partitions in KRaft mode; verified zero consumer lag.\\
+Apache Kafka & Distributed Streaming & Log Segments (KRaft) & Ingestion across 3 partitions in KRaft mode; verified zero consumer group lag.\\
 \hline
-Apache Flink & Real-Time Stream Engine & Stateful JVM Heap Snapshots & Sub-second clinical alert generation; 15-second tumbling window aggregations.\\
+Apache Flink & Real-Time Engine & JVM Heap Snapshots & Sub-second clinical alert generation; 15-second tumbling window aggregations.\\
 \hline
-MongoDB 7.0 & Document NoSQL Database & WiredTiger BSON on Disk & Compound B-Tree index eliminated 95.87\% of disk reads (COLLSCAN to IXSCAN).\\
+MongoDB 7.0 & Document NoSQL & WiredTiger BSON & Compound B-Tree index eliminated 95.87\% of physical disk reads (COLLSCAN to IXSCAN).\\
 \hline
-AWS Athena & Serverless Cloud Analytics & Columnar Apache Parquet in S3 & 66.63\% physical storage compression; 85\%-95\% reduction in query scan costs.\\
+AWS Athena & Serverless Cloud & Snappy Parquet (S3) & 66.63\% physical storage compression; 85\%--95\% reduction in Athena query scan costs.\\
 \hline
 \end{tabularx}
 \end{table}
@@ -1173,9 +1183,10 @@ The evaluation for each 4-mark activity is governed by the common assessment rub
 
 \begin{table}[H]
 \centering
+\small
 \caption{Common Assessment Rubric}
 \label{tab:appendix_rubric}
-\begin{tabularx}{\textwidth}{|c|X|c|c|}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{1.2cm}|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{2.8cm}|>{\centering\arraybackslash}p{2.8cm}|}
 \hline
 \textbf{Sl. No.} & \textbf{Evaluation Criterion} & \textbf{Marks per Activity} & \textbf{Total for 5 Activities}\\
 \hline
@@ -1194,9 +1205,10 @@ The evaluation for each 4-mark activity is governed by the common assessment rub
 
 \begin{table}[H]
 \centering
+\small
 \caption{Marks Awarded Evaluation Matrix}
 \label{tab:marks_awarded}
-\begin{tabularx}{\textwidth}{|c|l|c|c|c|c|c|}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.8cm}|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{1.8cm}|>{\centering\arraybackslash}p{1.8cm}|>{\centering\arraybackslash}p{1.8cm}|>{\centering\arraybackslash}p{1.8cm}|>{\centering\arraybackslash}p{1.8cm}|}
 \hline
 \textbf{No.} & \textbf{Activity Name} & \textbf{Crit. 1 (1.0)} & \textbf{Crit. 2 (1.5)} & \textbf{Crit. 3 (1.0)} & \textbf{Crit. 4 (0.5)} & \textbf{Total (4.0)}\\
 \hline
@@ -1226,9 +1238,10 @@ The final consolidated report strictly incorporates the six mandatory components
 
 \begin{table}[H]
 \centering
+\small
 \caption{Mandatory Report Components}
 \label{tab:mandatory_components}
-\begin{tabularx}{\textwidth}{|c|l|X|}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{1.2cm}|>{\raggedright\arraybackslash}p{3.8cm}|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Sl. No.} & \textbf{Component} & \textbf{Description}\\
 \hline
