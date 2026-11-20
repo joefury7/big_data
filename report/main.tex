@@ -123,15 +123,20 @@
   \section{Activity #1: #2}%
 }
 
-\newcommand{\insertfigure}[3][0.82\textwidth]{%
+\usepackage[font=small,labelfont=bf,skip=3pt]{caption}
+\setlength{\floatsep}{4pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{6pt plus 2pt minus 2pt}
+\setlength{\intextsep}{4pt plus 2pt minus 2pt}
+
+\newcommand{\insertfigure}[3]{%
 \begin{figure}[H]
     \centering
     \vspace{-2pt}
-    \includegraphics[width=#1,height=6.2cm,keepaspectratio]{#2}
-    \vspace{-4pt}
+    \includegraphics[width=0.96\textwidth,height=#1,keepaspectratio]{#2}
+    \vspace{-3pt}
     \caption{#3}
     \label{fig:#2}
-    \vspace{-4pt}
+    \vspace{-2pt}
 \end{figure}
 }
 
@@ -141,19 +146,19 @@
     \vspace{-2pt}
     \begin{minipage}[b]{0.485\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=5.2cm,keepaspectratio]{#1}
-        \vspace{-4pt}
+        \includegraphics[width=\textwidth,height=5.6cm,keepaspectratio]{#1}
+        \vspace{-3pt}
         \caption{#2}
         \label{fig:#1}
     \end{minipage}\hfill
     \begin{minipage}[b]{0.485\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=5.2cm,keepaspectratio]{#3}
-        \vspace{-4pt}
+        \includegraphics[width=\textwidth,height=5.6cm,keepaspectratio]{#3}
+        \vspace{-3pt}
         \caption{#4}
         \label{fig:#3}
     \end{minipage}
-    \vspace{-4pt}
+    \vspace{-2pt}
 \end{figure}
 }
 
@@ -525,10 +530,14 @@ Amazon S3 acts as a distributed object data lake, AWS Glue provides the centrali
 \section{Master Implementation Environment Verification}
 All distributed daemons were initialized via \texttt{start\_all\_services.sh}. Process states and network sockets were verified using native system tools.
 
-\insertfigure[0.85\textwidth]{images/env_services_all.png}{Master Services Launch Execution Output}
-\inserttwofigures{images/env_jps.png}{Java Virtual Machine Processes (jps)}{images/env_ports.png}{Enterprise Network Sockets Listening Across Designated Ports}
-\inserttwofigures{images/env_hdfs_start.png}{Hadoop HDFS Cluster Daemons Initialization}{images/env_kafka_start.png}{Apache Kafka Broker Initialization in Native KRaft Mode}
-\inserttwofigures{images/env_flink_start.png}{Apache Flink Standalone Cluster Initialization}{images/env_mongodb_start.png}{MongoDB 7.0 Community Server Daemon Initialization}
+\insertfigure{4.8cm}{images/env_services_all.png}{Master Services Launch Execution Output}
+\inserttwofigures{images/env_jps.png}{JVM Processes (jps)}{images/env_ports.png}{Listening Enterprise Network Sockets}
+
+\clearpage
+\insertfigure{3.4cm}{images/env_hdfs_start.png}{Hadoop HDFS Cluster Daemons Initialization}
+\insertfigure{3.4cm}{images/env_kafka_start.png}{Apache Kafka Broker Initialization in Native KRaft Mode}
+\insertfigure{3.4cm}{images/env_flink_start.png}{Apache Flink Standalone Cluster Initialization}
+\insertfigure{3.4cm}{images/env_mongodb_start.png}{MongoDB 7.0 Community Server Daemon Initialization}
 
 % ---------------- Activity 1 ----------------
 \clearpage
@@ -579,10 +588,17 @@ Partition Pruning & \texttt{WHERE branch\_code = 'JBJ\_BLR\_MSRIT\_060'} & Catal
 \end{tabularx}
 \end{table}
 
-\inserttwofigures{images/comp1_hdfs_report.png}{Hadoop HDFS Storage Capacity Report}{images/comp1_hdfs_data.png}{Raw Ingested CSV in HDFS Namespace}
-\inserttwofigures{images/comp1_hive_partitions_hdfs.png}{Physical HDFS Partition Subdirectories}{images/comp1_spark_tables.png}{Spark-SQL Hive Metastore Table Listing}
-\inserttwofigures{images/comp1_spark_partitions.png}{Listing Partitions for sales\_partitioned\_060}{images/comp1_spark_revenue.png}{Execution of Branch Revenue Aggregation Query}
-\insertfigure[0.85\textwidth]{images/comp1_catalyst_plan.png}{Spark-SQL Catalyst Optimizer Execution Plan Showing PartitionFilters}
+\insertfigure{4.5cm}{images/comp1_hdfs_report.png}{Hadoop HDFS Storage Capacity Report}
+\insertfigure{2.6cm}{images/comp1_hdfs_data.png}{Raw Ingested CSV in HDFS Namespace}
+
+\clearpage
+\insertfigure{2.6cm}{images/comp1_hive_partitions_hdfs.png}{Physical HDFS Partition Subdirectories}
+\insertfigure{4.0cm}{images/comp1_spark_tables.png}{Spark-SQL Hive Metastore Table Listing}
+\insertfigure{4.4cm}{images/comp1_spark_partitions.png}{Listing Partitions for sales\_partitioned\_060}
+\insertfigure{4.4cm}{images/comp1_spark_revenue.png}{Execution of Branch Revenue Aggregation Query}
+
+\clearpage
+\insertfigure{5.5cm}{images/comp1_catalyst_plan.png}{Spark-SQL Catalyst Optimizer Execution Plan Showing PartitionFilters}
 
 \noindent\textbf{Analysis \& Conclusion:} Snappy-compressed ORC format reduced storage, while Catalyst partition pruning eliminated 80\% of scanned directories for branch queries. Stock allocation should prioritize Electronics during evening hours.
 
@@ -633,10 +649,20 @@ for msg in consumer:
 \end{tabularx}
 \end{table}
 
-\inserttwofigures{images/comp2_kafka_topic.png}{Kafka Topic Describe Showing 3 Partitions in KRaft Mode}{images/comp2_kafka_producer.png}{Live Publishing of Traffic Telemetry Records}
-\inserttwofigures{images/comp2_kafka_console.png}{Kafka Console Consumer Streaming Messages with Keys}{images/comp2_kafka_consumer_start.png}{Consumer Group Initialization and Stream Processing}
-\inserttwofigures{images/comp2_congestion_alert.png}{Real-Time Congestion Alerts Dispatched by Consumer}{images/comp2_kafka_lag_zero.png}{Consumer Group Lag Verification (LAG = 0)}
-\inserttwofigures{images/comp2_incident_logs.png}{Audit Trail Log File of All Detected Traffic Bottlenecks}{images/comp2_dual_terminal.png}{Side-by-Side Dual Terminal Producer and Consumer View}
+\insertfigure{2.2cm}{images/comp2_kafka_topic.png}{Kafka Topic Describe Showing 3 Partitions in KRaft Mode}
+
+\clearpage
+\insertfigure{5.5cm}{images/comp2_kafka_producer.png}{Live Publishing of Traffic Telemetry Records}
+\insertfigure{3.8cm}{images/comp2_kafka_console.png}{Kafka Console Consumer Streaming Messages with Keys}
+\insertfigure{3.4cm}{images/comp2_kafka_consumer_start.png}{Consumer Group Initialization and Stream Processing}
+
+\clearpage
+\insertfigure{5.0cm}{images/comp2_congestion_alert.png}{Real-Time Congestion Alerts Dispatched by Consumer}
+\insertfigure{2.8cm}{images/comp2_kafka_lag_zero.png}{Consumer Group Lag Verification (LAG = 0)}
+\insertfigure{5.0cm}{images/comp2_incident_logs.png}{Audit Trail Log File of All Detected Traffic Bottlenecks}
+
+\clearpage
+\insertfigure{7.2cm}{images/comp2_dual_terminal.png}{Side-by-Side Dual Terminal Producer and Consumer View}
 
 \noindent\textbf{Analysis \& Conclusion:} Message key hashing ensured in-order event processing per junction. Zero consumer lag was maintained across all 3 partitions, proving high throughput stream ingestion.
 
@@ -685,11 +711,19 @@ ICU-BED-060-D & 21:52:30 & 82 bpm & 84\% & 37.0 & Flagged (Severe Hypoxemia)\\
 
 \noindent\textbf{Academic Notice:} This prototype utilizes synthetic physiological data and educational thresholds for demonstration purposes; it is not a certified medical device.
 
-\insertfigure[0.85\textwidth]{images/comp3_flink_dashboard_overview.png}{Apache Flink 1.18.1 Live Web Dashboard (localhost:8081)}
-\inserttwofigures{images/comp3_flink_dashboard_running.png}{Flink Cluster TaskManager and Slots Inspection}{images/comp3_vitals_producer.png}{Continuous Patient Telemetry Generator Output}
-\inserttwofigures{images/comp3_flink_alerts_immediate.png}{Flink Immediate Clinical Anomaly Detection Output}{images/comp3_flink_compound_alerts.png}{Compound Anomaly Detection (Shock Index)}
-\inserttwofigures{images/comp3_flink_audit_log.png}{Structured Clinical Incident Audit Log File}{images/comp3_flink_dag_graph.png}{Apache Flink Job Execution Graph and Stream Topology}
-\insertfigure[0.75\textwidth]{images/comp3_flink_job_cancel.png}{Flink Streaming Job Lifecycle Management and Termination}
+\clearpage
+\insertfigure{6.0cm}{images/comp3_flink_dashboard_overview.png}{Apache Flink 1.18.1 Live Web Dashboard (localhost:8081)}
+\insertfigure{4.5cm}{images/comp3_flink_dashboard_running.png}{Flink Cluster TaskManager and Slots Inspection}
+\insertfigure{5.0cm}{images/comp3_vitals_producer.png}{Continuous Patient Telemetry Generator Output}
+
+\clearpage
+\insertfigure{5.0cm}{images/comp3_flink_alerts_immediate.png}{Flink Immediate Clinical Anomaly Detection Output}
+\insertfigure{5.0cm}{images/comp3_flink_compound_alerts.png}{Compound Anomaly Detection (Shock Index)}
+\insertfigure{5.0cm}{images/comp3_flink_audit_log.png}{Structured Clinical Incident Audit Log File}
+
+\clearpage
+\insertfigure{5.8cm}{images/comp3_flink_dag_graph.png}{Apache Flink Job Execution Graph and Stream Topology}
+\insertfigure{5.0cm}{images/comp3_flink_job_cancel.png}{Flink Streaming Job Lifecycle Management and Termination}
 
 \noindent\textbf{Analysis \& Conclusion:} Flink's record-by-record pipelined model enabled sub-second alert detection. Tumbling windows smoothed sensor noise, ensuring accurate physiological anomaly reporting.
 
@@ -739,10 +773,15 @@ Scaling Model & Horizontal sharding across nodes natively & Primarily vertical s
 \end{tabularx}
 \end{table}
 
-\insertfigure[0.75\textwidth]{images/comp4_mongo_daemon.png}{MongoDB 7.0 WiredTiger Server Active Daemon Status}
+\clearpage
+\insertfigure{2.6cm}{images/comp4_mongo_daemon.png}{MongoDB 7.0 WiredTiger Server Active Daemon Status}
 \inserttwofigures{images/comp4_mongo_electronics_specs.png}{Polymorphic Electronics Document Specs}{images/comp4_mongo_grocery_specs.png}{Polymorphic Groceries Document Specs}
-\inserttwofigures{images/comp4_mongo_query_script.png}{CRUD Operations Script Output via mongosh CLI}{images/comp4_mongo_stats_index.png}{Collection Statistics and Compound Index Inspection}
-\inserttwofigures{images/comp4_mongo_explain_ixscan.png}{Execution Plan Benchmark (COLLSCAN to IXSCAN)}{images/comp4_mongo_aggregation.png}{Aggregation Pipeline Product Counts and Revenues}
+\insertfigure{5.2cm}{images/comp4_mongo_query_script.png}{CRUD Operations Script Output via mongosh CLI}
+
+\clearpage
+\insertfigure{5.2cm}{images/comp4_mongo_stats_index.png}{Collection Statistics and Compound Index Inspection}
+\insertfigure{3.8cm}{images/comp4_mongo_explain_ixscan.png}{Execution Plan Benchmark (COLLSCAN to IXSCAN)}
+\insertfigure{5.2cm}{images/comp4_mongo_aggregation.png}{Aggregation Pipeline Product Counts and Revenues}
 
 \noindent\textbf{Analysis \& Conclusion:} MongoDB handles polymorphic catalog attributes without schema migrations. Compound indexing drastically reduced I/O, providing sub-millisecond catalog retrieval.
 
@@ -790,18 +829,23 @@ Athena charges \$5.00 per terabyte (TB) scanned. Columnar projection reads only 
 \text{Cost}_{\text{Parquet}} &= (10\text{ TB} \times 0.3337) \times 0.15 \times \$5.00/\text{TB} = \mathbf{\$2.50\text{ per query (95\% savings)}}
 \end{align*}
 
-\inserttwofigures{images/comp5_cloud_s3_daemon.png}{AWS Cloud S3 Service Daemon (Port 5000)}{images/comp5_aws_cli_bucket.png}{Listing S3 Data Lake Bucket via AWS CLI}
-\inserttwofigures{images/comp5_parquet_compression.png}{Storage Comparison: 66.63\% Compression}{images/comp5_athena_query1.png}{Athena Query 1: HTTP Error Distribution}
-\inserttwofigures{images/comp5_athena_query2_3.png}{Athena Query 2 \& 3: Peak Usage and Endpoints}{images/comp5_aws_cost_model.png}{Cloud Financial Cost Model Calculation}
-\insertfigure[0.85\textwidth]{images/comp5_visual_dashboard.png}{Generated Multi-Panel Cloud Log Analytics Visual Dashboard}
+\clearpage
+\insertfigure{2.0cm}{images/comp5_cloud_s3_daemon.png}{AWS Cloud S3 Service Daemon (Port 5000)}
+\insertfigure{2.8cm}{images/comp5_aws_cli_bucket.png}{Listing S3 Data Lake Bucket via AWS CLI}
+\insertfigure{1.8cm}{images/comp5_parquet_compression.png}{Storage Comparison: 66.63\% Compression}
+\insertfigure{5.2cm}{images/comp5_athena_query1.png}{Athena Query 1: HTTP Error Distribution}
+
+\clearpage
+\insertfigure{5.2cm}{images/comp5_athena_query2_3.png}{Athena Query 2 \& 3: Peak Usage and Endpoints}
+\insertfigure{5.2cm}{images/comp5_aws_cost_model.png}{Cloud Financial Cost Model Calculation}
 
 \noindent\textbf{Analysis \& Conclusion:} Serverless Presto SQL over S3 Parquet datasets decouples compute from storage, eliminating idle cluster bills and accelerating ad-hoc log investigations.
 
 \clearpage
+\insertfigure{11.5cm}{images/comp5_visual_dashboard.png}{Generated Multi-Panel Cloud Log Analytics Visual Dashboard}
 
-% =========================================================
-% CHAPTER 5 - OVERALL ANALYSIS
-% =========================================================
+\clearpage
+
 \chapter{OVERALL ANALYSIS AND DISCUSSION}
 
 \section{Summary of Activity Outcomes}
