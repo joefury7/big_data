@@ -34,8 +34,15 @@ desktop.ini
 *.log
 *.out
 *.toc
+*.lof
+*.lot
 *.synctex.gz
 report/*.aux
 report/*.log
 report/*.out
 report/*.toc
+report/*.lof
+report/*.lot
+
+# Apache Derby Database
+metastore_db/
